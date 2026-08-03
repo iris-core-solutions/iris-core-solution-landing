@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="assets/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @font-face{font-family:'ABC';src:url('assets/fonts/Abc-tuned.ttf') format('truetype');font-display:block}
+  doc-page:not(:defined){visibility:hidden}
+  body{margin:0;font-family:'Space Grotesk',ui-sans-serif,system-ui,sans-serif;color:#14161A;-webkit-font-smoothing:antialiased}
+  a{color:#6D4DF6;text-decoration:none}a:hover{color:#5436D4}
+  *{box-sizing:border-box}
+</style>
+</helmet>
+<script src="assets/doc-page.js"></script>
+<doc-page size="letter" orientation="landscape" margin="0">
+
+<!-- 01 · PORTADA -->
+<section class="page" style="background:#0E1013;color:#F3F4F4;padding:0;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(#20262D 1.4px,transparent 1.4px);background-size:26px 26px;"></div>
+  <div style="position:absolute;right:-160px;top:-220px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(109,77,246,.40) 0%,rgba(109,77,246,.16) 34%,rgba(63,242,160,.07) 56%,transparent 72%);"></div>
+  <div style="position:relative;padding:72px 84px 0;display:flex;justify-content:space-between;align-items:flex-start;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.22em;color:#5D6670;">MANUAL DE IDENTIDAD VISUAL</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.22em;color:#3FF2A0;">V1 · 2026</div>
+  </div>
+  <div style="position:relative;padding:0 84px;">
+    <svg viewBox="0 0 100 100" fill="none" stroke="#F3F4F4" stroke-width="5.5" stroke-linecap="round" style="width:78px;height:78px;margin-bottom:38px;">
+      <circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#F3F4F4" stroke="none"></rect>
+    </svg>
+    <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:76px;line-height:.98;color:#F3F4F4;">IRIS CORE<br>SOLUTION</div>
+  </div>
+  <div style="position:relative;padding:0 84px 64px;display:flex;justify-content:space-between;align-items:flex-end;gap:48px;">
+    <div style="font-size:19px;line-height:1.45;color:#8D95A0;max-width:520px;">Encontramos la fricción que nadie ve.<br>La liberamos con inteligencia artificial.</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;color:#5D6670;text-align:right;line-height:1.9;">X:26 · Y:26<br>SCAN 01</div>
+  </div>
+</section>
+
+<!-- 02 · ÍNDICE -->
+<section class="page" style="background:#F3F4F4;padding:72px 84px 56px;position:relative;display:flex;flex-direction:column;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#5D6670;margin-bottom:14px;">CONTENIDO</div>
+  <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:46px;line-height:1;color:#14161A;margin-bottom:44px;">ÍNDICE</div>
+  <div style="display:flex;gap:64px;flex:1;">
+    <div style="flex:1;display:flex;flex-direction:column;gap:0;">
+      <div style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6D4DF6;width:26px;">01</span><span style="font-size:17px;font-weight:500;flex:1;">La marca</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;">03</span></div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;width:26px;"></span><span style="font-size:15px;color:#5D6670;flex:1;">Arquetipo y personalidad</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;">04</span></div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;width:26px;"></span><span style="font-size:15px;color:#5D6670;flex:1;">Territorio visual</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;">05</span></div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6D4DF6;width:26px;">02</span><span style="font-size:17px;font-weight:500;flex:1;">Marca gráfica</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;">06</span></div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;width:26px;"></span><span style="font-size:15px;color:#5D6670;flex:1;">Anatomía del símbolo</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;">07</span></div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;width:26px;"></span><span style="font-size:15px;color:#5D6670;flex:1;">Construcción y zona libre</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;">08</span></div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;width:26px;"></span><span style="font-size:15px;color:#5D6670;flex:1;">Versiones y escala</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;">09</span></div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;width:26px;"></span><span style="font-size:15px;color:#5D6670;flex:1;">Usos incorrectos</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;">11</span></div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:0;">
+      <div style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6D4DF6;width:26px;">03</span><span style="font-size:17px;font-weight:500;flex:1;">Color</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;">12</span></div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;width:26px;"></span><span style="font-size:15px;color:#5D6670;flex:1;">Paleta y roles</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;">13</span></div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;width:26px;"></span><span style="font-size:15px;color:#5D6670;flex:1;">Combinaciones y contextos</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;">15</span></div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6D4DF6;width:26px;">04</span><span style="font-size:17px;font-weight:500;flex:1;">Tipografía</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;">16</span></div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;width:26px;"></span><span style="font-size:15px;color:#5D6670;flex:1;">ABC · sistema de tres · jerarquía</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;">17</span></div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6D4DF6;width:26px;">05</span><span style="font-size:17px;font-weight:500;flex:1;">Lenguaje gráfico</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;">19</span></div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;width:26px;"></span><span style="font-size:15px;color:#5D6670;flex:1;">Recursos · iconografía · motion</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;">20</span></div>
+      <div style="display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6D4DF6;width:26px;">06</span><span style="font-size:17px;font-weight:500;flex:1;">Aplicaciones</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8D95A0;">24</span></div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8D95A0;border-top:1px solid #D7DBE0;padding-top:14px;margin-top:20px;"><span>ICS · MANUAL DE IDENTIDAD</span><span>02</span></div>
+</section>
+
+<!-- 03 · LA MARCA -->
+<section class="page" style="background:#F3F4F4;padding:72px 84px 56px;display:flex;flex-direction:column;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#6D4DF6;margin-bottom:14px;">01 · LA MARCA</div>
+  <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;color:#14161A;margin-bottom:36px;">SOBRE LA MARCA</div>
+  <div style="display:flex;gap:56px;flex:1;">
+    <div style="flex:1.25;display:flex;flex-direction:column;gap:18px;">
+      <p style="margin:0;font-size:17px;line-height:1.6;color:#14161A;">Iris Core Solution encuentra y libera fricciones dentro de los procesos de una empresa, aplicando inteligencia artificial de forma práctica y accesible.</p>
+      <p style="margin:0;font-size:15.5px;line-height:1.65;color:#5D6670;">El nombre no es casual: el iris regula lo que entra y permite enfocar con claridad lo que antes era borroso. Así trabajamos — enfocamos la mirada en procesos que las empresas ya no ven porque están acostumbradas a ellos, y ahí encontramos la fricción.</p>
+      <p style="margin:0;font-size:15.5px;line-height:1.65;color:#5D6670;">Acompañamos de principio a fin: del análisis profundo hasta la implementación. Identificamos lo que le sirve a la operación e implementamos soluciones que generan resultados reales, sin exigir conocimiento técnico del equipo.</p>
+      <div style="border-left:2px solid #6D4DF6;padding-left:22px;margin-top:8px;">
+        <div style="font-size:20px;line-height:1.4;color:#14161A;font-style:italic;">“No vendemos inteligencia artificial. Vendemos el hallazgo, el camino y la solución.”</div>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:20px;">
+      <div style="background:#0E1013;border-radius:12px;padding:26px 28px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;color:#3FF2A0;margin-bottom:12px;">MISIÓN</div>
+        <p style="margin:0;font-size:14.5px;line-height:1.6;color:#D6D9DD;">Encontrar y liberar las fricciones ocultas en los procesos de las pymes, acompañándolas de principio a fin en la integración de soluciones de IA, sin exigirles experticia técnica propia.</p>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #D7DBE0;border-radius:12px;padding:26px 28px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;color:#6D4DF6;margin-bottom:12px;">VISIÓN</div>
+        <p style="margin:0;font-size:14.5px;line-height:1.6;color:#5D6670;">Ser el aliado de referencia en Latinoamérica para que cualquier pyme, sin importar su tamaño o conocimiento técnico, opere con la fluidez de una empresa de clase mundial gracias a la inteligencia artificial.</p>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8D95A0;border-top:1px solid #D7DBE0;padding-top:14px;margin-top:24px;"><span>ICS · LA MARCA</span><span>03</span></div>
+</section>
+
+<!-- 04 · ARQUETIPO -->
+<section class="page" style="background:#F3F4F4;padding:72px 84px 56px;display:flex;flex-direction:column;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#6D4DF6;margin-bottom:14px;">01 · LA MARCA</div>
+  <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;color:#14161A;margin-bottom:10px;">ARQUETIPO</div>
+  <div style="font-size:16px;color:#5D6670;margin-bottom:34px;">Explorador / Descubridor</div>
+  <div style="display:flex;gap:48px;flex:1;">
+    <div style="flex:1;">
+      <p style="margin:0 0 18px;font-size:15.5px;line-height:1.65;color:#5D6670;">La marca que no se conforma con lo conocido, que necesita salir a buscar lo que está fuera de la vista. Cada proyecto es una expedición: entramos a un área de la empresa como territorio a explorar y volvemos con un hallazgo y un camino claro.</p>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="display:flex;gap:14px;padding-bottom:12px;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#8D95A0;width:96px;flex:0 0 auto;padding-top:3px;">DESEO</span><span style="font-size:14.5px;line-height:1.55;color:#14161A;flex:1;">La libertad de encontrar algo mejor y llegar a un lugar nuevo.</span></div>
+        <div style="display:flex;gap:14px;padding-bottom:12px;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#8D95A0;width:96px;flex:0 0 auto;padding-top:3px;">TEMOR</span><span style="font-size:14.5px;line-height:1.55;color:#14161A;flex:1;">Quedar atrapada en procesos repetitivos e invisibles al cambio.</span></div>
+        <div style="display:flex;gap:14px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#8D95A0;width:96px;flex:0 0 auto;padding-top:3px;">ESTRATEGIA</span><span style="font-size:14.5px;line-height:1.55;color:#14161A;flex:1;">Viajar hacia lo desconocido de un proceso, experimentar, no conformarse.</span></div>
+      </div>
+    </div>
+    <div style="flex:1;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;color:#6D4DF6;margin-bottom:16px;">PERSONALIDAD</div>
+      <div style="display:flex;flex-direction:column;gap:11px;">
+        <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:9px;padding:13px 16px;"><span style="font-size:14.5px;font-weight:600;">Curiosa</span> <span style="font-size:14px;color:#5D6670;">— pregunta antes de asumir; busca la causa, no el síntoma.</span></div>
+        <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:9px;padding:13px 16px;"><span style="font-size:14.5px;font-weight:600;">Audaz</span> <span style="font-size:14px;color:#5D6670;">— señala lo que no funciona, aunque sea incómodo.</span></div>
+        <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:9px;padding:13px 16px;"><span style="font-size:14.5px;font-weight:600;">Cercana</span> <span style="font-size:14px;color:#5D6670;">— habla con las personas, no desde una torre técnica.</span></div>
+        <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:9px;padding:13px 16px;"><span style="font-size:14.5px;font-weight:600;">Resolutiva</span> <span style="font-size:14px;color:#5D6670;">— acompaña hasta que la solución vive en la empresa.</span></div>
+        <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:9px;padding:13px 16px;"><span style="font-size:14.5px;font-weight:600;">Honesta</span> <span style="font-size:14px;color:#5D6670;">— dice lo que encuentra, aunque no sea lo esperado.</span></div>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8D95A0;border-top:1px solid #D7DBE0;padding-top:14px;margin-top:24px;"><span>ICS · LA MARCA</span><span>04</span></div>
+</section>
+
+<!-- 05 · TERRITORIO -->
+<section class="page" style="background:#0E1013;color:#F3F4F4;padding:0;position:relative;overflow:hidden;display:flex;flex-direction:column;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(#20262D 1.4px,transparent 1.4px);background-size:26px 26px;"></div>
+  <div style="position:absolute;right:-140px;top:-180px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(109,77,246,.40) 0%,rgba(109,77,246,.16) 34%,rgba(63,242,160,.07) 56%,transparent 72%);"></div>
+  <div style="position:relative;padding:72px 84px 0;flex:1;display:flex;flex-direction:column;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#3FF2A0;margin-bottom:14px;">01 · LA MARCA</div>
+    <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;margin-bottom:10px;">TERRITORIO VISUAL</div>
+    <div style="font-size:16px;color:#8D95A0;margin-bottom:36px;">Instrumento que revela</div>
+    <div style="display:flex;gap:48px;flex:1;">
+      <div style="flex:1;">
+        <p style="margin:0 0 20px;font-size:16px;line-height:1.65;color:#D6D9DD;max-width:440px;">La identidad cruza dos naturalezas: la <b style="color:#F3F4F4;">precisión instrumental</b> que da la estructura —retícula, medición, rigor— y el <b style="color:#F3F4F4;">umbral de luz</b> que da el momento emocional: algo oscuro que se ilumina.</p>
+        <p style="margin:0 0 26px;font-size:16px;line-height:1.65;color:#D6D9DD;max-width:440px;">Un instrumento frío que produce un hallazgo cálido.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:440px;">
+          <div style="display:flex;gap:14px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6D4DF6;width:76px;flex:0 0 auto;padding-top:3px;">ESTRUCTURA</span><span style="font-size:14px;line-height:1.55;color:#8D95A0;">Retícula visible, marcas de eje, datos en mono, cero adorno.</span></div>
+          <div style="display:flex;gap:14px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6D4DF6;width:76px;flex:0 0 auto;padding-top:3px;">LUZ</span><span style="font-size:14px;line-height:1.55;color:#8D95A0;">Fondo profundo, un solo foco, la revelación como momento.</span></div>
+          <div style="display:flex;gap:14px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6D4DF6;width:76px;flex:0 0 auto;padding-top:3px;">REGLA</span><span style="font-size:14px;line-height:1.55;color:#8D95A0;">La estructura siempre es fría; la luz aparece una vez por pieza.</span></div>
+        </div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:20px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;color:#5D6670;margin-bottom:16px;">PALABRAS CLAVE</div>
+        <div style="display:flex;flex-wrap:wrap;gap:9px;">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;border:1px solid #2A2E35;border-radius:18px;padding:8px 15px;color:#D6D9DD;">calibrar</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;border:1px solid #2A2E35;border-radius:18px;padding:8px 15px;color:#D6D9DD;">revelar</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;border:1px solid #2A2E35;border-radius:18px;padding:8px 15px;color:#D6D9DD;">retícula</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;border:1px solid #2A2E35;border-radius:18px;padding:8px 15px;color:#D6D9DD;">umbral</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;border:1px solid #2A2E35;border-radius:18px;padding:8px 15px;color:#D6D9DD;">evidencia</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;border:1px solid #2A2E35;border-radius:18px;padding:8px 15px;color:#D6D9DD;">hallazgo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="position:relative;padding:0 84px 44px;display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#5D6670;border-top:1px solid #1F242B;padding-top:14px;margin:20px 84px 44px;"><span>ICS · TERRITORIO VISUAL</span><span>05</span></div>
+</section>
+
+<!-- 06 · PORTADILLA MARCA GRÁFICA -->
+<section class="page" style="background:#0E1013;color:#F3F4F4;padding:0;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(#20262D 1.4px,transparent 1.4px);background-size:26px 26px;"></div>
+  <div style="position:absolute;left:-180px;bottom:-240px;width:680px;height:680px;border-radius:50%;background:radial-gradient(circle,rgba(109,77,246,.38) 0%,rgba(109,77,246,.15) 34%,rgba(63,242,160,.06) 56%,transparent 72%);"></div>
+  <div style="position:relative;padding:0 84px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.24em;color:#3FF2A0;margin-bottom:22px;">SECCIÓN 02</div>
+    <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:88px;line-height:.96;">MARCA<br>GRÁFICA</div>
+    <div style="font-size:17px;color:#8D95A0;margin-top:26px;max-width:460px;line-height:1.55;">El símbolo, sus versiones, su construcción y las reglas que lo mantienen reconocible en cualquier soporte.</div>
+  </div>
+  <div style="position:absolute;bottom:44px;left:84px;right:84px;display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#5D6670;"><span>ICS · MARCA GRÁFICA</span><span>06</span></div>
+</section>
+
+<!-- 07 · ANATOMÍA -->
+<section class="page" style="background:#F3F4F4;padding:72px 84px 56px;display:flex;flex-direction:column;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#6D4DF6;margin-bottom:14px;">02 · MARCA GRÁFICA</div>
+  <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;color:#14161A;margin-bottom:34px;">ANATOMÍA DEL SÍMBOLO</div>
+  <div style="display:flex;gap:56px;flex:1;align-items:center;">
+    <div style="flex:0 0 300px;">
+      <svg viewBox="0 0 220 220" style="width:100%;height:auto;">
+        <g stroke="#D7DBE0" stroke-width="1"><path d="M110 6 V214"></path><path d="M6 110 H214"></path></g>
+        <circle cx="110" cy="110" r="90" fill="none" stroke="#D7DBE0" stroke-width="1" stroke-dasharray="4 4"></circle>
+        <circle cx="110" cy="110" r="68" fill="none" stroke="#D7DBE0" stroke-width="1" stroke-dasharray="4 4"></circle>
+        <g fill="none" stroke="#14161A" stroke-width="5.5" stroke-linecap="round" transform="translate(0,0) scale(2.2)">
+          <circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path>
+        </g>
+        <rect x="99" y="74.8" width="22" height="70.4" rx="11" fill="#6D4DF6"></rect>
+        <g stroke="#6D4DF6" stroke-width="1"><path d="M99 158 H121"></path><path d="M99 154 V162"></path><path d="M121 154 V162"></path></g>
+        <text x="110" y="176" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6D4DF6">X</text>
+      </svg>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:16px;">
+      <p style="margin:0;font-size:16px;line-height:1.6;color:#14161A;">El símbolo es un iris de trazo monolineal. Tres elementos, ninguno decorativo:</p>
+      <div style="display:flex;gap:16px;padding:15px 0;border-top:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6D4DF6;width:88px;flex:0 0 auto;padding-top:2px;">ANILLO</span><span style="font-size:14.5px;line-height:1.55;color:#5D6670;flex:1;">El campo completo de visión. Círculo perfecto de radio 41 sobre retícula de 100.</span></div>
+      <div style="display:flex;gap:16px;padding:15px 0;border-top:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6D4DF6;width:88px;flex:0 0 auto;padding-top:2px;">ARCOS</span><span style="font-size:14.5px;line-height:1.55;color:#5D6670;flex:1;">La apertura girando: el diafragma que enfoca. Dos arcos concéntricos a radio 31, opuestos a 180°.</span></div>
+      <div style="display:flex;gap:16px;padding:15px 0;border-top:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6D4DF6;width:88px;flex:0 0 auto;padding-top:2px;">PUPILA</span><span style="font-size:14.5px;line-height:1.55;color:#5D6670;flex:1;">La “I” de Iris y el punto de foco. Su ancho define la unidad <b style="color:#14161A;">X</b> de todo el sistema.</span></div>
+      <div style="display:flex;gap:16px;padding:15px 0;border-top:1px solid #D7DBE0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6D4DF6;width:88px;flex:0 0 auto;padding-top:2px;">TRAZO</span><span style="font-size:14.5px;line-height:1.55;color:#5D6670;flex:1;">Grosor uniforme de 5.5 unidades con terminales redondeadas. Nunca varía de peso.</span></div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8D95A0;border-top:1px solid #D7DBE0;padding-top:14px;margin-top:24px;"><span>ICS · MARCA GRÁFICA</span><span>07</span></div>
+</section>
+
+<!-- 08 · CONSTRUCCIÓN -->
+<section class="page" style="background:#F3F4F4;padding:72px 84px 56px;display:flex;flex-direction:column;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#6D4DF6;margin-bottom:14px;">02 · MARCA GRÁFICA</div>
+  <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;color:#14161A;margin-bottom:8px;">CONSTRUCCIÓN Y ZONA LIBRE</div>
+  <div style="font-size:15px;color:#5D6670;margin-bottom:30px;max-width:640px;line-height:1.55;">La unidad de medida es <b style="color:#14161A;">X = el ancho de la pupila</b>. Zona libre de 1X por lado y separación símbolo–texto de 1X, en todas las versiones.</div>
+  <div style="display:flex;gap:44px;flex:1;align-items:center;">
+    <div style="flex:1.5;">
+      <svg viewBox="0 0 460 200" style="width:100%;height:auto;">
+        <g fill="#EAE7F7"><rect x="0" y="0" width="443" height="16"></rect><rect x="0" y="156" width="443" height="16"></rect><rect x="0" y="16" width="16" height="140"></rect><rect x="427" y="16" width="16" height="140"></rect></g>
+        <rect x="0" y="0" width="443" height="172" fill="none" stroke="#D7DBE0" stroke-width="1.2"></rect>
+        <rect x="16" y="16" width="411" height="140" fill="none" stroke="#6D4DF6" stroke-width="1.2" stroke-dasharray="5 4"></rect>
+        <g fill="none" stroke="#14161A" stroke-width="5.5" stroke-linecap="round" transform="translate(6,6) scale(1.6)">
+          <circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path>
+        </g>
+        <rect x="78" y="60.4" width="16" height="51.2" rx="8" fill="#14161A"></rect>
+        <text x="172" y="97" font-family="ABC, Space Grotesk, sans-serif" font-size="31" fill="#14161A">IRIS CORE SOLUTION</text>
+        <g stroke="#6D4DF6" stroke-width="1" stroke-dasharray="4 3"><path d="M156 22 V150"></path><path d="M172 22 V150"></path></g>
+        <text x="158" y="11" font-family="IBM Plex Mono, monospace" font-size="9" fill="#6D4DF6">1X</text>
+        <g fill="#6D4DF6" font-family="IBM Plex Mono, monospace" font-size="9"><text x="3" y="11">X</text><text x="431" y="11">X</text></g>
+        <text x="0" y="192" font-family="IBM Plex Mono, monospace" font-size="9" fill="#8D95A0">IMAGOTIPO HORIZONTAL · VERSIÓN MAESTRA · ANCHO MÍNIMO 130px / 40mm</text>
+      </svg>
+    </div>
+    <div style="flex:0 0 210px;">
+      <svg viewBox="58 8 184 296" style="width:100%;height:auto;">
+        <g fill="#EAE7F7"><rect x="64" y="16" width="172" height="16"></rect><rect x="64" y="247" width="172" height="16"></rect><rect x="64" y="32" width="16" height="215"></rect><rect x="220" y="32" width="16" height="215"></rect></g>
+        <rect x="64" y="16" width="172" height="247" fill="none" stroke="#D7DBE0" stroke-width="1.2"></rect>
+        <rect x="80" y="32" width="140" height="215" fill="none" stroke="#6D4DF6" stroke-width="1.2" stroke-dasharray="5 4"></rect>
+        <g fill="none" stroke="#14161A" stroke-width="5.5" stroke-linecap="round" transform="translate(70,22) scale(1.6)">
+          <circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path>
+        </g>
+        <rect x="142" y="76.4" width="16" height="51.2" rx="8" fill="#14161A"></rect>
+        <g stroke="#6D4DF6" stroke-width="1" stroke-dasharray="4 3"><path d="M72 172 H228"></path><path d="M72 188 H228"></path></g>
+        <text x="86" y="184" font-family="IBM Plex Mono, monospace" font-size="9" fill="#6D4DF6">1X</text>
+        <text x="150" y="212" text-anchor="middle" font-family="ABC, Space Grotesk, sans-serif" font-size="26" fill="#14161A">IRIS CORE</text>
+        <text x="150" y="244" text-anchor="middle" font-family="ABC, Space Grotesk, sans-serif" font-size="26" fill="#14161A">SOLUTION</text>
+        <g fill="#6D4DF6" font-family="IBM Plex Mono, monospace" font-size="9"><text x="67" y="28">X</text><text x="224" y="28">X</text></g>
+        <text x="150" y="288" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#8D95A0">VERTICAL · MÍN. 80px / 26mm</text>
+      </svg>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8D95A0;border-top:1px solid #D7DBE0;padding-top:14px;margin-top:24px;"><span>ICS · MARCA GRÁFICA</span><span>08</span></div>
+</section>
+
+<!-- 09 · VERSIONES -->
+<section class="page" style="background:#F3F4F4;padding:72px 84px 56px;display:flex;flex-direction:column;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#6D4DF6;margin-bottom:14px;">02 · MARCA GRÁFICA</div>
+  <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;color:#14161A;margin-bottom:30px;">VERSIONES DE COLOR</div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1;">
+    <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:12px;padding:28px 20px;display:flex;flex-direction:column;justify-content:space-between;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:18px;">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#14161A" stroke-width="5.5" stroke-linecap="round" style="width:52px;height:52px;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#14161A" stroke="none"></rect></svg>
+        <svg viewBox="0 0 100 100" style="width:40px;height:40px;"><circle cx="50" cy="50" r="42" fill="#14161A"></circle><path d="M27 37 A29 29 0 0 1 45 22.5" fill="none" stroke="#FFF" stroke-width="5.5" stroke-linecap="round"></path><path d="M73 63 A29 29 0 0 1 55 77.5" fill="none" stroke="#FFF" stroke-width="5.5" stroke-linecap="round"></path><rect x="45" y="35" width="10" height="30" rx="5" fill="#FFF"></rect></svg>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#5D6670;text-align:center;line-height:1.6;">POSITIVO<br><span style="color:#8D95A0;">fondo claro</span></div>
+    </div>
+    <div style="background:#0E1013;border-radius:12px;padding:28px 20px;display:flex;flex-direction:column;justify-content:space-between;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:18px;">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#F3F4F4" stroke-width="5.5" stroke-linecap="round" style="width:52px;height:52px;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#F3F4F4" stroke="none"></rect></svg>
+        <svg viewBox="0 0 100 100" style="width:40px;height:40px;"><circle cx="50" cy="50" r="42" fill="#F3F4F4"></circle><path d="M27 37 A29 29 0 0 1 45 22.5" fill="none" stroke="#0E1013" stroke-width="5.5" stroke-linecap="round"></path><path d="M73 63 A29 29 0 0 1 55 77.5" fill="none" stroke="#0E1013" stroke-width="5.5" stroke-linecap="round"></path><rect x="45" y="35" width="10" height="30" rx="5" fill="#0E1013"></rect></svg>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#8D95A0;text-align:center;line-height:1.6;">REVERSO<br><span style="color:#5D6670;">fondo oscuro</span></div>
+    </div>
+    <div style="background:#6D4DF6;border-radius:12px;padding:28px 20px;display:flex;flex-direction:column;justify-content:space-between;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:18px;">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#FFF" stroke-width="5.5" stroke-linecap="round" style="width:52px;height:52px;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#FFF" stroke="none"></rect></svg>
+        <svg viewBox="0 0 100 100" style="width:40px;height:40px;"><circle cx="50" cy="50" r="42" fill="#FFF"></circle><path d="M27 37 A29 29 0 0 1 45 22.5" fill="none" stroke="#6D4DF6" stroke-width="5.5" stroke-linecap="round"></path><path d="M73 63 A29 29 0 0 1 55 77.5" fill="none" stroke="#6D4DF6" stroke-width="5.5" stroke-linecap="round"></path><rect x="45" y="35" width="10" height="30" rx="5" fill="#6D4DF6"></rect></svg>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#D9CFFD;text-align:center;line-height:1.6;">SOBRE ACENTO<br><span style="color:#BCA9FA;">violeta pleno</span></div>
+    </div>
+    <div style="background:#5D6670;border-radius:12px;padding:28px 20px;display:flex;flex-direction:column;justify-content:space-between;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:18px;">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#FFF" stroke-width="5.5" stroke-linecap="round" style="width:52px;height:52px;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#FFF" stroke="none"></rect></svg>
+        <svg viewBox="0 0 100 100" style="width:40px;height:40px;"><circle cx="50" cy="50" r="42" fill="#FFF"></circle><path d="M27 37 A29 29 0 0 1 45 22.5" fill="none" stroke="#5D6670" stroke-width="5.5" stroke-linecap="round"></path><path d="M73 63 A29 29 0 0 1 55 77.5" fill="none" stroke="#5D6670" stroke-width="5.5" stroke-linecap="round"></path><rect x="45" y="35" width="10" height="30" rx="5" fill="#5D6670"></rect></svg>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;color:#E4E7EA;text-align:center;line-height:1.6;">1 TINTA<br><span style="color:#C7CDD3;">grabado / bordado</span></div>
+    </div>
+  </div>
+  <div style="margin-top:22px;font-size:14.5px;line-height:1.6;color:#5D6670;max-width:800px;">Cada versión existe en imagotipo y en sello. El <b style="color:#14161A;">sello</b> —el disco calado— es obligatorio por debajo de 24px: avatar, favicon, ícono de app, bordado y troquelado.</div>
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8D95A0;border-top:1px solid #D7DBE0;padding-top:14px;margin-top:20px;"><span>ICS · MARCA GRÁFICA</span><span>09</span></div>
+</section>
+
+<!-- 10 · ESCALA -->
+<section class="page" style="background:#F3F4F4;padding:72px 84px 56px;display:flex;flex-direction:column;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#6D4DF6;margin-bottom:14px;">02 · MARCA GRÁFICA</div>
+  <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;color:#14161A;margin-bottom:8px;">ESCALA RESPONSIVE</div>
+  <div style="font-size:15px;color:#5D6670;margin-bottom:34px;max-width:680px;line-height:1.55;">El símbolo se simplifica al reducirse. A cada escala se elimina lo que dejaría de leerse, para que la marca nunca aparezca empastada.</div>
+  <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:12px;padding:40px 44px;display:flex;align-items:flex-end;justify-content:space-around;flex:1;">
+    <div style="text-align:center;">
+      <svg viewBox="0 0 100 100" fill="none" stroke="#14161A" stroke-width="5.5" stroke-linecap="round" style="width:96px;height:96px;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#14161A" stroke="none"></rect></svg>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5D6670;margin-top:16px;line-height:1.7;">≥ 48px<br><span style="color:#8D95A0;">completo</span></div>
+    </div>
+    <div style="text-align:center;">
+      <svg viewBox="0 0 100 100" fill="none" stroke="#14161A" stroke-width="7" stroke-linecap="round" style="width:62px;height:62px;"><circle cx="50" cy="50" r="41"></circle><path d="M26 38 A31 31 0 0 1 41 23"></path><rect x="44" y="34" width="12" height="32" rx="6" fill="#14161A" stroke="none"></rect></svg>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5D6670;margin-top:16px;line-height:1.7;">24–47px<br><span style="color:#8D95A0;">un arco</span></div>
+    </div>
+    <div style="text-align:center;">
+      <svg viewBox="0 0 100 100" fill="none" stroke="#14161A" stroke-width="9" stroke-linecap="round" style="width:40px;height:40px;"><circle cx="50" cy="50" r="40"></circle><rect x="43" y="32" width="14" height="36" rx="7" fill="#14161A" stroke="none"></rect></svg>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5D6670;margin-top:16px;line-height:1.7;">16–23px<br><span style="color:#8D95A0;">anillo + pupila</span></div>
+    </div>
+    <div style="text-align:center;">
+      <svg viewBox="0 0 100 100" style="width:26px;height:26px;"><circle cx="50" cy="50" r="44" fill="#14161A"></circle><rect x="41" y="28" width="18" height="44" rx="9" fill="#FFF"></rect></svg>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#5D6670;margin-top:16px;line-height:1.7;">≤ 16px<br><span style="color:#8D95A0;">sello calado</span></div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8D95A0;border-top:1px solid #D7DBE0;padding-top:14px;margin-top:24px;"><span>ICS · MARCA GRÁFICA</span><span>10</span></div>
+</section>
+
+<!-- 11 · USOS INCORRECTOS -->
+<section class="page" style="background:#F3F4F4;padding:72px 84px 56px;display:flex;flex-direction:column;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#6D4DF6;margin-bottom:14px;">02 · MARCA GRÁFICA</div>
+  <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;color:#14161A;margin-bottom:30px;">USOS INCORRECTOS</div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1;">
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:11px;flex:1;display:flex;align-items:center;justify-content:center;">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#14161A" stroke-width="5.5" stroke-linecap="round" style="width:60px;height:60px;transform:scaleX(1.45);"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#14161A" stroke="none"></rect></svg>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#C0392B;margin-top:11px;line-height:1.5;">✕ NO DEFORMAR<br><span style="color:#8D95A0;">escalar siempre proporcional</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:11px;flex:1;display:flex;align-items:center;justify-content:center;">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#14161A" stroke-width="2" stroke-linecap="round" style="width:60px;height:60px;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="47" y="34" width="6" height="32" rx="3" fill="#14161A" stroke="none"></rect></svg>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#C0392B;margin-top:11px;line-height:1.5;">✕ NO CAMBIAR EL PESO<br><span style="color:#8D95A0;">trazo fijo en 5.5u</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:11px;flex:1;display:flex;align-items:center;justify-content:center;">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#3FF2A0" stroke-width="5.5" stroke-linecap="round" style="width:60px;height:60px;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5" stroke="#6D4DF6"></path><path d="M76 64 A31 31 0 0 1 57 79.5" stroke="#6D4DF6"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#6D4DF6" stroke="none"></rect></svg>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#C0392B;margin-top:11px;line-height:1.5;">✕ NO MEZCLAR COLORES<br><span style="color:#8D95A0;">el símbolo es de una sola tinta</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:11px;flex:1;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+        <div style="position:absolute;inset:0;background:repeating-linear-gradient(45deg,#C7CDD3,#C7CDD3 7px,#8D95A0 7px,#8D95A0 14px);"></div>
+        <svg viewBox="0 0 100 100" fill="none" stroke="#14161A" stroke-width="5.5" stroke-linecap="round" style="width:60px;height:60px;position:relative;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#14161A" stroke="none"></rect></svg>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#C0392B;margin-top:11px;line-height:1.5;">✕ NO SOBRE FONDO CON RUIDO<br><span style="color:#8D95A0;">exige contraste limpio</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:11px;flex:1;display:flex;align-items:center;justify-content:center;">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#14161A" stroke-width="5.5" stroke-linecap="round" style="width:60px;height:60px;transform:rotate(24deg);"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#14161A" stroke="none"></rect></svg>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#C0392B;margin-top:11px;line-height:1.5;">✕ NO ROTAR<br><span style="color:#8D95A0;">la pupila siempre vertical</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:11px;flex:1;display:flex;align-items:center;justify-content:center;gap:3px;">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#14161A" stroke-width="5.5" stroke-linecap="round" style="width:44px;height:44px;flex:0 0 auto;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#14161A" stroke="none"></rect></svg>
+        <span style="font-family:'ABC','Space Grotesk',sans-serif;font-size:13px;color:#14161A;line-height:1;">IRIS CORE</span>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#C0392B;margin-top:11px;line-height:1.5;">✕ NO INVADIR LA ZONA LIBRE<br><span style="color:#8D95A0;">mínimo 1X de aire</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:11px;flex:1;display:flex;align-items:center;justify-content:center;">
+        <svg viewBox="0 0 100 100" style="width:60px;height:60px;"><circle cx="50" cy="50" r="41" fill="none" stroke="#14161A" stroke-width="5.5"></circle><path d="M24 36 A31 31 0 0 1 43 20.5" fill="none" stroke="#14161A" stroke-width="5.5" stroke-linecap="round"></path><path d="M76 64 A31 31 0 0 1 57 79.5" fill="none" stroke="#14161A" stroke-width="5.5" stroke-linecap="round"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#14161A"></rect><ellipse cx="50" cy="88" rx="34" ry="7" fill="#8D95A0" opacity=".5"></ellipse></svg>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#C0392B;margin-top:11px;line-height:1.5;">✕ NO AÑADIR EFECTOS<br><span style="color:#8D95A0;">sin sombra, brillo ni relieve</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:11px;flex:1;display:flex;align-items:center;justify-content:center;">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:5px;">
+          <svg viewBox="0 0 100 100" fill="none" stroke="#14161A" stroke-width="5.5" stroke-linecap="round" style="width:44px;height:44px;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#14161A" stroke="none"></rect></svg>
+          <span style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#14161A;">Iris Core</span>
+        </div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#C0392B;margin-top:11px;line-height:1.5;">✕ NO CAMBIAR LA TIPOGRAFÍA<br><span style="color:#8D95A0;">el nombre va siempre en ABC</span></div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8D95A0;border-top:1px solid #D7DBE0;padding-top:14px;margin-top:20px;"><span>ICS · MARCA GRÁFICA</span><span>11</span></div>
+</section>
+
+<!-- 12 · PORTADILLA COLOR -->
+<section class="page" style="background:#0E1013;color:#F3F4F4;padding:0;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(#20262D 1.4px,transparent 1.4px);background-size:26px 26px;"></div>
+  <div style="position:absolute;right:-200px;top:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(109,77,246,.40) 0%,rgba(109,77,246,.16) 34%,rgba(63,242,160,.07) 56%,transparent 72%);"></div>
+  <div style="position:relative;padding:0 84px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.24em;color:#3FF2A0;margin-bottom:22px;">SECCIÓN 03</div>
+    <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:88px;line-height:.96;">COLOR</div>
+    <div style="font-size:17px;color:#8D95A0;margin-top:26px;max-width:480px;line-height:1.55;">Un trabajo por color, sin excepciones. El fósforo es del sistema; el violeta es del usuario. Lo demás es gris.</div>
+  </div>
+  <div style="position:absolute;bottom:44px;left:84px;right:84px;display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#5D6670;"><span>ICS · COLOR</span><span>12</span></div>
+</section>
+
+<!-- 13 · PALETA -->
+<section class="page" style="background:#F3F4F4;padding:72px 84px 56px;display:flex;flex-direction:column;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#6D4DF6;margin-bottom:14px;">03 · COLOR</div>
+  <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;color:#14161A;margin-bottom:30px;">LA PALETA</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;flex:1;">
+    <div style="border:1px solid #D7DBE0;border-radius:12px;overflow:hidden;background:#FFF;display:flex;flex-direction:column;">
+      <div style="background:#0E1013;flex:1;min-height:96px;"></div>
+      <div style="padding:16px 18px;">
+        <div style="font-size:16px;font-weight:600;margin-bottom:3px;">Carbón</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5D6670;line-height:1.7;">#0E1013<br>R14 G16 B19<br>C80 M71 Y62 K80</div>
+      </div>
+    </div>
+    <div style="border:1px solid #D7DBE0;border-radius:12px;overflow:hidden;background:#FFF;display:flex;flex-direction:column;">
+      <div style="background:#3FF2A0;flex:1;min-height:96px;"></div>
+      <div style="padding:16px 18px;">
+        <div style="font-size:16px;font-weight:600;margin-bottom:3px;">Fósforo</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5D6670;line-height:1.7;">#3FF2A0<br>R63 G242 B160<br>C62 M0 Y50 K0</div>
+      </div>
+    </div>
+    <div style="border:1px solid #D7DBE0;border-radius:12px;overflow:hidden;background:#FFF;display:flex;flex-direction:column;">
+      <div style="background:#6D4DF6;flex:1;min-height:96px;"></div>
+      <div style="padding:16px 18px;">
+        <div style="font-size:16px;font-weight:600;margin-bottom:3px;">Violeta</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5D6670;line-height:1.7;">#6D4DF6<br>R109 G77 B246<br>C67 M70 Y0 K0</div>
+      </div>
+    </div>
+    <div style="border:1px solid #D7DBE0;border-radius:12px;overflow:hidden;background:#FFF;display:flex;flex-direction:column;">
+      <div style="background:#5D6670;flex:1;min-height:96px;"></div>
+      <div style="padding:16px 18px;">
+        <div style="font-size:16px;font-weight:600;margin-bottom:3px;">Acero</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5D6670;line-height:1.7;">#5D6670<br>R93 G102 B112<br>C62 M48 Y38 K19</div>
+      </div>
+    </div>
+    <div style="border:1px solid #D7DBE0;border-radius:12px;overflow:hidden;background:#FFF;display:flex;flex-direction:column;">
+      <div style="background:#F3F4F4;border-bottom:1px solid #E4E7EA;flex:1;min-height:96px;"></div>
+      <div style="padding:16px 18px;">
+        <div style="font-size:16px;font-weight:600;margin-bottom:3px;">Niebla</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5D6670;line-height:1.7;">#F3F4F4<br>R243 G244 B244<br>C4 M2 Y3 K0</div>
+      </div>
+    </div>
+    <div style="border:1px solid #D7DBE0;border-radius:12px;overflow:hidden;background:#FFF;display:flex;flex-direction:column;">
+      <div style="background:#1B1F25;flex:1;min-height:96px;"></div>
+      <div style="padding:16px 18px;">
+        <div style="font-size:16px;font-weight:600;margin-bottom:3px;">Superficie</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5D6670;line-height:1.7;">#1B1F25<br>R27 G31 B37<br>C77 M67 Y57 K65</div>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8D95A0;border-top:1px solid #D7DBE0;padding-top:14px;margin-top:22px;"><span>ICS · COLOR</span><span>13</span></div>
+</section>
+
+<!-- 14 · ROLES -->
+<section class="page" style="background:#F3F4F4;padding:72px 84px 56px;display:flex;flex-direction:column;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#6D4DF6;margin-bottom:14px;">03 · COLOR</div>
+  <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;color:#14161A;margin-bottom:8px;">ROLES Y PROPORCIÓN</div>
+  <div style="font-size:15px;color:#5D6670;margin-bottom:28px;max-width:700px;line-height:1.55;">El fósforo informa, el violeta acciona. Si un elemento no es ninguna de las dos cosas, va en gris.</div>
+  <div style="display:flex;height:56px;border-radius:9px;overflow:hidden;margin-bottom:10px;">
+    <div style="flex:60;background:#0E1013;"></div><div style="flex:8;background:#5D6670;"></div><div style="flex:5;background:#6D4DF6;"></div><div style="flex:3;background:#3FF2A0;"></div><div style="flex:24;background:#FFF;border:1px solid #D7DBE0;border-left:none;"></div>
+  </div>
+  <div style="display:flex;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8D95A0;margin-bottom:28px;letter-spacing:.06em;">
+    <div style="flex:60;">CARBÓN 60%</div><div style="flex:8;">ACERO</div><div style="flex:5;">VIOLETA</div><div style="flex:3;">FÓSF.</div><div style="flex:24;">NIEBLA</div>
+  </div>
+  <div style="display:flex;flex-direction:column;flex:1;">
+    <div style="display:flex;gap:20px;padding:15px 0;border-top:1px solid #D7DBE0;align-items:flex-start;"><span style="width:18px;height:18px;border-radius:4px;background:#0E1013;flex:0 0 auto;margin-top:2px;"></span><span style="width:104px;flex:0 0 auto;font-size:15px;font-weight:600;">Carbón</span><span style="flex:1;font-size:14.5px;line-height:1.55;color:#5D6670;"><b style="color:#14161A;">Estructura.</b> Fondos principales y tipografía sobre claro. Es el color que más superficie ocupa.</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8D95A0;width:110px;text-align:right;flex:0 0 auto;">50–70%</span></div>
+    <div style="display:flex;gap:20px;padding:15px 0;border-top:1px solid #D7DBE0;align-items:flex-start;"><span style="width:18px;height:18px;border-radius:4px;background:#3FF2A0;flex:0 0 auto;margin-top:2px;"></span><span style="width:104px;flex:0 0 auto;font-size:15px;font-weight:600;">Fósforo</span><span style="flex:1;font-size:14.5px;line-height:1.55;color:#5D6670;"><b style="color:#14161A;">El sistema habla.</b> Datos en vivo, estados activos, hallazgos detectados. Nunca es clicable.</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8D95A0;width:110px;text-align:right;flex:0 0 auto;">≤ 5%</span></div>
+    <div style="display:flex;gap:20px;padding:15px 0;border-top:1px solid #D7DBE0;align-items:flex-start;"><span style="width:18px;height:18px;border-radius:4px;background:#6D4DF6;flex:0 0 auto;margin-top:2px;"></span><span style="width:104px;flex:0 0 auto;font-size:15px;font-weight:600;">Violeta</span><span style="flex:1;font-size:14.5px;line-height:1.55;color:#5D6670;"><b style="color:#14161A;">El usuario acciona.</b> CTA, links, foco de formulario, selección. Todo lo violeta se puede tocar.</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8D95A0;width:110px;text-align:right;flex:0 0 auto;">≤ 8% · 1 CTA</span></div>
+    <div style="display:flex;gap:20px;padding:15px 0;border-top:1px solid #D7DBE0;align-items:flex-start;"><span style="width:18px;height:18px;border-radius:4px;background:#5D6670;flex:0 0 auto;margin-top:2px;"></span><span style="width:104px;flex:0 0 auto;font-size:15px;font-weight:600;">Acero</span><span style="flex:1;font-size:14.5px;line-height:1.55;color:#5D6670;"><b style="color:#14161A;">Todo lo demás.</b> Texto secundario, bordes, retícula, etiquetas y ejes de gráfica.</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8D95A0;width:110px;text-align:right;flex:0 0 auto;">sin límite</span></div>
+    <div style="display:flex;gap:20px;padding:15px 0;border-top:1px solid #D7DBE0;border-bottom:1px solid #D7DBE0;align-items:flex-start;"><span style="width:18px;height:18px;border-radius:4px;background:#F3F4F4;border:1px solid #D7DBE0;flex:0 0 auto;margin-top:2px;"></span><span style="width:104px;flex:0 0 auto;font-size:15px;font-weight:600;">Niebla</span><span style="flex:1;font-size:14.5px;line-height:1.55;color:#5D6670;"><b style="color:#14161A;">Respiro.</b> Fondo del modo claro y de todo documento impreso o de lectura larga.</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8D95A0;width:110px;text-align:right;flex:0 0 auto;">fondo alterno</span></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8D95A0;border-top:1px solid #D7DBE0;padding-top:14px;margin-top:22px;"><span>ICS · COLOR</span><span>14</span></div>
+</section>
+
+<!-- 15 · COMBINACIONES -->
+<section class="page" style="background:#F3F4F4;padding:72px 84px 56px;display:flex;flex-direction:column;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#6D4DF6;margin-bottom:14px;">03 · COLOR</div>
+  <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;color:#14161A;margin-bottom:26px;">COMBINACIONES</div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;flex:1;">
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#0E1013;border-radius:11px;flex:1;padding:20px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;">
+        <div style="position:absolute;inset:0;background-image:radial-gradient(#20262D 1.2px,transparent 1.2px);background-size:20px 20px;"></div>
+        <div style="position:relative;font-family:'IBM Plex Mono',monospace;font-size:9px;color:#3FF2A0;letter-spacing:.14em;">● 3 FRICCIONES</div>
+        <div style="position:relative;font-family:'ABC','Space Grotesk',sans-serif;font-size:19px;color:#F3F4F4;line-height:1.08;">18 HORAS EN EXCEL</div>
+        <div style="position:relative;background:#6D4DF6;color:#FFF;font-size:10px;font-weight:600;padding:7px 12px;border-radius:6px;align-self:flex-start;">Ver diagnóstico</div>
+      </div>
+      <div style="margin-top:12px;"><div style="font-size:14px;font-weight:600;margin-bottom:4px;">A · Los tres</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8D95A0;line-height:1.6;">HERO WEB · DASHBOARD<br>POST DE DATO · SLIDE DE RESULTADO</div></div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#0E1013;border-radius:11px;flex:1;padding:20px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;">
+        <div style="position:absolute;right:-40px;bottom:-50px;width:150px;height:150px;border:1px solid #232830;border-radius:50%;"></div>
+        <svg viewBox="0 0 100 100" fill="none" stroke="#F3F4F4" stroke-width="5.5" stroke-linecap="round" style="width:24px;height:24px;position:relative;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#F3F4F4" stroke="none"></rect></svg>
+        <div style="position:relative;font-family:'ABC','Space Grotesk',sans-serif;font-size:19px;color:#F3F4F4;line-height:1.08;">ENCONTRAMOS LA FRICCIÓN</div>
+      </div>
+      <div style="margin-top:12px;"><div style="font-size:14px;font-weight:600;margin-bottom:4px;">B · Carbón puro</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8D95A0;line-height:1.6;">PORTADAS · ROLL-UP<br>MANIFIESTO · CIERRE DE VIDEO</div></div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#6D4DF6;border-radius:11px;flex:1;padding:20px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;">
+        <div style="position:absolute;left:-40px;bottom:-60px;width:170px;height:170px;border:1px solid rgba(255,255,255,.28);border-radius:50%;"></div>
+        <svg viewBox="0 0 100 100" fill="none" stroke="#FFF" stroke-width="5.5" stroke-linecap="round" style="width:24px;height:24px;position:relative;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#FFF" stroke="none"></rect></svg>
+        <div style="position:relative;font-family:'ABC','Space Grotesk',sans-serif;font-size:19px;color:#FFF;line-height:1.08;">¿Y SI NADIE TUVIERA QUE HACERLO?</div>
+      </div>
+      <div style="margin-top:12px;"><div style="font-size:14px;font-weight:600;margin-bottom:4px;">C · Violeta pleno</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8D95A0;line-height:1.6;">LÁMINA DE PREGUNTA · CTA<br>CIERRE DE CARRUSEL</div></div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:11px;flex:1;padding:20px;display:flex;flex-direction:column;justify-content:space-between;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:#5D6670;letter-spacing:.14em;">PASO 01 · ENFOCAR</div>
+        <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:19px;color:#0E1013;line-height:1.08;">CÓRNEA</div>
+        <div style="background:#6D4DF6;color:#FFF;font-size:10px;font-weight:600;padding:7px 12px;border-radius:6px;align-self:flex-start;">Agenda</div>
+      </div>
+      <div style="margin-top:12px;"><div style="font-size:14px;font-weight:600;margin-bottom:4px;">D · Modo claro</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8D95A0;line-height:1.6;">PROPUESTAS · INFORMES<br>PAPELERÍA · CUERPO DE WEB</div></div>
+    </div>
+  </div>
+  <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:11px;padding:18px 22px;margin-top:20px;display:flex;gap:32px;align-items:center;flex-wrap:wrap;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#C0392B;flex:0 0 auto;">NUNCA</div>
+    <div style="font-size:13.5px;color:#5D6670;flex:1;line-height:1.6;">Fósforo sobre violeta (vibran) · fósforo como botón (el verde no es clicable) · degradado entre los dos acentos (cliché de IA) · fósforo como fondo de área grande · fósforo en modo claro.</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8D95A0;border-top:1px solid #D7DBE0;padding-top:14px;margin-top:18px;"><span>ICS · COLOR</span><span>15</span></div>
+</section>
+
+<!-- 16 · PORTADILLA TIPOGRAFÍA -->
+<section class="page" style="background:#0E1013;color:#F3F4F4;padding:0;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(#20262D 1.4px,transparent 1.4px);background-size:26px 26px;"></div>
+  <div style="position:absolute;left:-160px;top:-220px;width:660px;height:660px;border-radius:50%;background:radial-gradient(circle,rgba(109,77,246,.38) 0%,rgba(109,77,246,.15) 34%,rgba(63,242,160,.06) 56%,transparent 72%);"></div>
+  <div style="position:relative;padding:0 84px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.24em;color:#3FF2A0;margin-bottom:22px;">SECCIÓN 04</div>
+    <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:88px;line-height:.96;">TIPOGRAFÍA</div>
+    <div style="font-size:17px;color:#8D95A0;margin-top:26px;max-width:480px;line-height:1.55;">ABC nombra, Space Grotesk explica, IBM Plex Mono mide. Cada una solo en su papel.</div>
+  </div>
+  <div style="position:absolute;bottom:44px;left:84px;right:84px;display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#5D6670;"><span>ICS · TIPOGRAFÍA</span><span>16</span></div>
+</section>
+
+<!-- 17 · ABC -->
+<section class="page" style="background:#F3F4F4;padding:48px 84px 40px;display:flex;flex-direction:column;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#6D4DF6;margin-bottom:14px;">04 · TIPOGRAFÍA</div>
+  <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;color:#14161A;margin-bottom:8px;">ABC · DISPLAY</div>
+  <div style="font-size:15px;color:#5D6670;margin-bottom:26px;max-width:700px;line-height:1.55;">La tipografía propietaria de ICS. Monolineal, geométrica y de trazo intermitente — el mismo ADN del símbolo. Se usa solo en caja alta y solo en titulares.</div>
+  <div style="background:#0E1013;border-radius:12px;padding:34px 38px;margin-bottom:20px;">
+    <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;color:#F3F4F4;line-height:1.22;letter-spacing:.01em;">ABCDEFGHIJKLMNÑOPQRSTUVWXYZ<br>0123456789 · ÁÉÍÓÚÜ · ¿? ¡!</div>
+  </div>
+  <div style="display:flex;gap:20px;flex:1;">
+    <div style="flex:1;background:#FFF;border:1px solid #D7DBE0;border-radius:11px;padding:22px 24px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#8D95A0;margin-bottom:14px;">ESPECIFICACIÓN</div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #E4E7EA;font-size:13.5px;"><span style="color:#14161A;">Peso</span><span style="font-family:'IBM Plex Mono',monospace;color:#5D6670;">Regular · único</span></div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #E4E7EA;font-size:13.5px;"><span style="color:#14161A;">Tamaño</span><span style="font-family:'IBM Plex Mono',monospace;color:#5D6670;">36–120px</span></div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #E4E7EA;font-size:13.5px;"><span style="color:#14161A;">Mínimo</span><span style="font-family:'IBM Plex Mono',monospace;color:#5D6670;">28px</span></div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #E4E7EA;font-size:13.5px;"><span style="color:#14161A;">Tracking</span><span style="font-family:'IBM Plex Mono',monospace;color:#5D6670;">0 a +2%</span></div>
+      <div style="display:flex;justify-content:space-between;padding:8px 0;font-size:13.5px;"><span style="color:#14161A;">Interlínea</span><span style="font-family:'IBM Plex Mono',monospace;color:#5D6670;">1.0–1.12</span></div>
+    </div>
+    <div style="flex:1;background:#FFF;border:1px solid #D7DBE0;border-radius:11px;padding:22px 24px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#8D95A0;margin-bottom:14px;">REGLAS</div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:13.5px;line-height:1.55;color:#5D6670;">
+        <div>· Máximo <b style="color:#14161A;">6 palabras</b> por titular.</div>
+        <div>· Un solo bloque en ABC por vista o lámina.</div>
+        <div>· Nunca en párrafos, botones ni interfaz.</div>
+        <div>· Nunca por debajo de 28px: el trazo se rompe.</div>
+        <div>· Sustituto web si no carga: Space Grotesk 700 en caja alta, tracking +4%.</div>
+      </div>
+    </div>
+    <div style="flex:1;background:#6D4DF6;border-radius:11px;padding:22px 24px;color:#FFF;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#D9CFFD;margin-bottom:14px;">NOTA DE PRODUCCIÓN</div>
+      <div style="font-size:13.5px;line-height:1.6;color:#EDE8FE;">El archivo de marca es <b style="color:#FFF;">Abc-tuned.ttf</b>, versión con los glifos estrechos ajustados a espaciado proporcional. La “I” pasó de 574 a 132 unidades de avance. No usar el archivo original.</div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8D95A0;border-top:1px solid #D7DBE0;padding-top:14px;margin-top:22px;"><span>ICS · TIPOGRAFÍA</span><span>17</span></div>
+</section>
+
+<!-- 18 · JERARQUÍA -->
+<section class="page" style="background:#F3F4F4;padding:42px 84px 36px;display:flex;flex-direction:column;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#6D4DF6;margin-bottom:14px;">04 · TIPOGRAFÍA</div>
+  <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;color:#14161A;margin-bottom:16px;">SISTEMA Y JERARQUÍA</div>
+  <div style="display:flex;gap:24px;flex:1;">
+    <div style="flex:1.15;display:flex;flex-direction:column;">
+      <div style="display:flex;gap:20px;align-items:baseline;padding:14px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;line-height:1.7;color:#8D95A0;width:126px;flex:0 0 auto;">DISPLAY · ABC<br>36–120px</span><span style="font-family:'ABC','Space Grotesk',sans-serif;font-size:31px;color:#14161A;line-height:1;">ENCONTRAMOS LA FRICCIÓN</span></div>
+      <div style="display:flex;gap:20px;align-items:baseline;padding:14px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;line-height:1.7;color:#8D95A0;width:126px;flex:0 0 auto;">SUBTÍTULO · SG 500<br>20–30px</span><span style="font-size:23px;font-weight:500;letter-spacing:-.015em;color:#14161A;">Córnea · Conos · Panorama</span></div>
+      <div style="display:flex;gap:20px;align-items:baseline;padding:14px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;line-height:1.7;color:#8D95A0;width:126px;flex:0 0 auto;">CUERPO · SG 400<br>15–17px · 1.6</span><span style="font-size:15.5px;line-height:1.6;color:#5D6670;flex:1;">Identificamos lo que le sirve a tu operación e implementamos soluciones con IA que generan resultados reales.</span></div>
+      <div style="display:flex;gap:20px;align-items:baseline;padding:14px 0;border-bottom:1px solid #D7DBE0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;line-height:1.7;color:#8D95A0;width:126px;flex:0 0 auto;">ETIQUETA · MONO<br>10–13px · +14%</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;color:#5D6670;">PASO 01 · ENFOCAR</span></div>
+      <div style="display:flex;gap:20px;align-items:baseline;padding:14px 0;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;line-height:1.7;color:#8D95A0;width:126px;flex:0 0 auto;">CIFRA · MONO 500<br>24–40px</span><span style="font-family:'IBM Plex Mono',monospace;font-size:34px;font-weight:500;color:#14161A;">-42%</span></div>
+      <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:11px;padding:18px 22px;margin-top:auto;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#8D95A0;margin-bottom:10px;">CÓMO SE COMBINAN</div>
+        <div style="display:flex;flex-direction:column;gap:7px;font-size:13.5px;line-height:1.55;color:#5D6670;">
+          <div>· Entre ABC y el texto debe haber al menos <b style="color:#14161A;">2.5× de diferencia</b> de tamaño.</div>
+          <div>· La etiqueta mono va arriba del titular o debajo de la cifra — nunca a su lado.</div>
+          <div>· El mono nunca lleva más de tres líneas seguidas.</div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1;background:#0E1013;border-radius:12px;padding:34px 32px;display:flex;flex-direction:column;justify-content:center;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:#3FF2A0;">● PASO 01 · ENFOCAR</div>
+      <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:46px;color:#F3F4F4;line-height:1.02;margin-top:16px;">CÓRNEA</div>
+      <div style="font-size:15px;color:#8D95A0;line-height:1.6;margin-top:14px;">Análisis profundo de la empresa mediante entrevistas y herramientas de recopilación. La IA entra desde el inicio.</div>
+      <div style="display:flex;gap:28px;margin-top:24px;border-top:1px solid #1F242B;padding-top:18px;">
+        <div><div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:500;color:#F3F4F4;">-42%</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:#5D6670;letter-spacing:.14em;margin-top:4px;">TIEMPO</div></div>
+        <div><div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:500;color:#F3F4F4;">18h</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:#5D6670;letter-spacing:.14em;margin-top:4px;">AHORRO/SEM</div></div>
+        <div><div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:500;color:#3FF2A0;">3</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:#5D6670;letter-spacing:.14em;margin-top:4px;">FRICCIONES</div></div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#5D6670;letter-spacing:.12em;margin-top:26px;">LAS TRES EN UNA PIEZA</div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8D95A0;border-top:1px solid #D7DBE0;padding-top:14px;margin-top:22px;"><span>ICS · TIPOGRAFÍA</span><span>18</span></div>
+</section>
+
+<!-- 19 · PORTADILLA LENGUAJE -->
+<section class="page" style="background:#0E1013;color:#F3F4F4;padding:0;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(#20262D 1.4px,transparent 1.4px);background-size:26px 26px;"></div>
+  <div style="position:absolute;right:-180px;bottom:-260px;width:720px;height:720px;border-radius:50%;background:radial-gradient(circle,rgba(109,77,246,.38) 0%,rgba(109,77,246,.15) 34%,rgba(63,242,160,.06) 56%,transparent 72%);"></div>
+  <div style="position:relative;padding:0 84px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.24em;color:#3FF2A0;margin-bottom:22px;">SECCIÓN 05</div>
+    <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:88px;line-height:.96;">LENGUAJE<br>GRÁFICO</div>
+    <div style="font-size:17px;color:#8D95A0;margin-top:26px;max-width:480px;line-height:1.55;">Dos recursos de forma y una capa de luz. Nada más — y nunca los tres a la vez.</div>
+  </div>
+  <div style="position:absolute;bottom:44px;left:84px;right:84px;display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#5D6670;"><span>ICS · LENGUAJE GRÁFICO</span><span>19</span></div>
+</section>
+
+<!-- 20 · RECURSOS -->
+<section class="page" style="background:#F3F4F4;padding:72px 84px 56px;display:flex;flex-direction:column;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#6D4DF6;margin-bottom:14px;">05 · LENGUAJE GRÁFICO</div>
+  <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;color:#14161A;margin-bottom:26px;">LOS TRES RECURSOS</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;flex:1;">
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#0E1013;border-radius:11px;flex:1;position:relative;overflow:hidden;padding:22px;display:flex;flex-direction:column;justify-content:space-between;">
+        <div style="position:absolute;inset:0;background-image:radial-gradient(#22282F 1.4px,transparent 1.4px);background-size:26px 26px;"></div>
+        <div style="position:relative;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#3FF2A0;letter-spacing:.16em;">● FRICCIÓN 01</div>
+        <div style="position:relative;font-family:'ABC','Space Grotesk',sans-serif;font-size:24px;color:#F3F4F4;line-height:1.08;">18 HORAS<br>EN EXCEL</div>
+      </div>
+      <div style="margin-top:14px;">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:7px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;background:#14161A;color:#F3F4F4;border-radius:4px;padding:2px 7px;">R1</span><span style="font-size:15.5px;font-weight:600;">Trama de puntos</span></div>
+        <div style="font-size:13px;line-height:1.55;color:#5D6670;margin-bottom:8px;">El territorio sin explorar. Punto 1.4px, malla 26px. Siempre sobre carbón, en gris muy bajo.</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8D95A0;line-height:1.6;">POSTS DE DATO · HERO WEB<br>DASHBOARD · TARJETAS</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#6D4DF6;border-radius:11px;flex:1;position:relative;overflow:hidden;padding:22px;display:flex;flex-direction:column;justify-content:space-between;">
+        <div style="position:absolute;left:-70px;bottom:-110px;width:280px;height:280px;border:1.4px solid rgba(255,255,255,.3);border-radius:50%;"></div>
+        <div style="position:absolute;left:-30px;bottom:-70px;width:200px;height:200px;border:1.4px solid rgba(255,255,255,.22);border-radius:50%;"></div>
+        <svg viewBox="0 0 100 100" fill="none" stroke="#FFF" stroke-width="5.5" stroke-linecap="round" style="width:26px;height:26px;position:relative;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#FFF" stroke="none"></rect></svg>
+        <div style="position:relative;font-family:'ABC','Space Grotesk',sans-serif;font-size:24px;color:#FFF;line-height:1.08;">¿Y SI NADIE TUVIERA QUE HACERLO?</div>
+      </div>
+      <div style="margin-top:14px;">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:7px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;background:#14161A;color:#F3F4F4;border-radius:4px;padding:2px 7px;">R2</span><span style="font-size:15.5px;font-weight:600;">Círculos concéntricos</span></div>
+        <div style="font-size:13px;line-height:1.55;color:#5D6670;margin-bottom:8px;">El hallazgo propagándose. Trazo 1.4px, máximo 3 anillos, siempre cortados por el borde — nunca centrados.</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8D95A0;line-height:1.6;">LÁMINAS DE PREGUNTA · CTA<br>PORTADAS · ROLL-UP · STANDS</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#0E1013;border-radius:11px;flex:1;position:relative;overflow:hidden;padding:22px;display:flex;flex-direction:column;justify-content:space-between;">
+        <div style="position:absolute;inset:0;background-image:radial-gradient(#20262D 1.4px,transparent 1.4px);background-size:26px 26px;"></div>
+        <div style="position:absolute;right:-90px;top:-110px;width:330px;height:330px;border-radius:50%;background:radial-gradient(circle,rgba(109,77,246,.40) 0%,rgba(109,77,246,.16) 34%,rgba(63,242,160,.07) 56%,transparent 72%);"></div>
+        <div style="position:relative;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#5D6670;letter-spacing:.16em;">X:26 · Y:26</div>
+        <div style="position:relative;font-family:'ABC','Space Grotesk',sans-serif;font-size:24px;color:#F3F4F4;line-height:1.08;">LO QUE NADIE VE, AHORA SE MIDE</div>
+      </div>
+      <div style="margin-top:14px;">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:7px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;background:#6D4DF6;color:#FFF;border-radius:4px;padding:2px 7px;">R3</span><span style="font-size:15.5px;font-weight:600;">Halo de foco</span></div>
+        <div style="font-size:13px;line-height:1.55;color:#5D6670;margin-bottom:8px;">Capa de luz, no patrón. Uno por pieza, sangrado por una esquina, violeta al núcleo y fósforo en el borde. De cada cinco piezas, cuatro van sin halo.</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8D95A0;line-height:1.6;">HERO · PORTADA DE DECK<br>BANNER · FONDO DE VIDEO</div>
+      </div>
+    </div>
+  </div>
+  <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:11px;padding:16px 22px;margin-top:20px;display:flex;gap:28px;align-items:center;flex-wrap:wrap;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#6D4DF6;flex:0 0 auto;">REGLA MAESTRA</div>
+    <div style="font-size:13.5px;color:#5D6670;flex:1;line-height:1.6;">Nunca dos recursos en la misma pieza. El halo puede acompañar a los puntos, jamás a los círculos. Y nunca más de dos piezas seguidas con el mismo recurso.</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8D95A0;border-top:1px solid #D7DBE0;padding-top:14px;margin-top:18px;"><span>ICS · LENGUAJE GRÁFICO</span><span>20</span></div>
+</section>
+
+<!-- 21 · ICONOGRAFÍA -->
+<section class="page" style="background:#F3F4F4;padding:50px 84px 40px;display:flex;flex-direction:column;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#6D4DF6;margin-bottom:14px;">05 · LENGUAJE GRÁFICO</div>
+  <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;color:#14161A;margin-bottom:8px;">ICONOGRAFÍA</div>
+  <div style="font-size:15px;color:#5D6670;margin-bottom:26px;max-width:720px;line-height:1.55;">Trazo fino con cortes limpios en las juntas, igual que la tipografía ABC. Retícula de 24, grosor 1.3u, corte 1.6u, terminales redondeadas.</div>
+  <div style="display:flex;gap:20px;flex:1;">
+    <div style="flex:2.4;background:#FFF;border:1px solid #D7DBE0;border-radius:11px;padding:24px;display:grid;grid-template-columns:repeat(6,1fr);gap:14px;align-content:center;">
+      <div style="text-align:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#14161A" stroke-width="1.3" stroke-linecap="round" style="width:34px;height:34px;"><path d="M14.5 3.9 A8.5 8.5 0 0 1 20.1 9.5"></path><path d="M20.1 14.5 A8.5 8.5 0 0 1 14.5 20.1"></path><path d="M9.5 20.1 A8.5 8.5 0 0 1 3.9 14.5"></path><path d="M3.9 9.5 A8.5 8.5 0 0 1 9.5 3.9"></path><path d="M12 8.6 V15.4"></path></svg><div style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:#8D95A0;margin-top:8px;">IA</div></div>
+      <div style="text-align:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#14161A" stroke-width="1.3" stroke-linecap="round" style="width:34px;height:34px;"><path d="M4 7.5 H11"></path><path d="M14 7.5 A2.6 2.6 0 0 1 16.6 10.1 V13"></path><path d="M16.6 16 V17.5"></path><path d="M20 16.5 H18"></path><path d="M14.4 15 L16.6 17.2 L18.8 15"></path><circle cx="4" cy="7.5" r="1.5"></circle></svg><div style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:#8D95A0;margin-top:8px;">AUTOMATIZAR</div></div>
+      <div style="text-align:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#14161A" stroke-width="1.3" stroke-linecap="round" style="width:34px;height:34px;"><path d="M8 5 H16.5 A2.5 2.5 0 0 1 19 7.5 V13"></path><path d="M19 15.5 A2.5 2.5 0 0 1 16.5 16 H10.5 L6.5 19.5 V16"></path><path d="M5 13.5 V7.5 A2.5 2.5 0 0 1 5.6 6"></path><path d="M9.5 10.5 H9.51"></path><path d="M12 10.5 H12.01"></path><path d="M14.5 10.5 H14.51"></path></svg><div style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:#8D95A0;margin-top:8px;">CHATBOT</div></div>
+      <div style="text-align:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#14161A" stroke-width="1.3" stroke-linecap="round" style="width:34px;height:34px;"><path d="M4 8.5 V17 A2.5 2.5 0 0 0 6.5 19.5 H17.5 A2.5 2.5 0 0 0 20 17 V8.5"></path><path d="M4 6.5 A2.5 2.5 0 0 1 6.5 4.5 H17.5 A2.5 2.5 0 0 1 20 6.5"></path><path d="M4.5 9 H19.5"></path><circle cx="8.5" cy="14" r="1.7"></circle><path d="M13 13 H17.5"></path><path d="M13 16 H16"></path></svg><div style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:#8D95A0;margin-top:8px;">CRM</div></div>
+      <div style="text-align:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#14161A" stroke-width="1.3" stroke-linecap="round" style="width:34px;height:34px;"><path d="M4 19.5 V14"></path><path d="M9.3 19.5 V9"></path><path d="M14.7 19.5 V15.5"></path><path d="M20 19.5 V5"></path></svg><div style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:#8D95A0;margin-top:8px;">ANALYTICS</div></div>
+      <div style="text-align:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#14161A" stroke-width="1.3" stroke-linecap="round" style="width:34px;height:34px;"><circle cx="6" cy="6" r="2.3"></circle><circle cx="18" cy="18" r="2.3"></circle><path d="M6 9 V12.5"></path><path d="M6.6 15.2 A3 3 0 0 0 9 16.2 H12"></path><path d="M14.5 16.2 H15.4"></path></svg><div style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:#8D95A0;margin-top:8px;">PROCESOS</div></div>
+      <div style="text-align:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#14161A" stroke-width="1.3" stroke-linecap="round" style="width:34px;height:34px;"><path d="M5 11 A2.5 2.5 0 0 1 7.5 8.5 H16.5 A2.5 2.5 0 0 1 19 11 V16"></path><path d="M19 18 A1.5 1.5 0 0 1 17.5 19 H6.5 A1.5 1.5 0 0 1 5 17.5 V13.5"></path><path d="M12 8 V5.4"></path><circle cx="12" cy="4" r="1"></circle><path d="M9.3 13 H9.31"></path><path d="M14.7 13 H14.71"></path></svg><div style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:#8D95A0;margin-top:8px;">ROBOT</div></div>
+      <div style="text-align:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#14161A" stroke-width="1.3" stroke-linecap="round" style="width:34px;height:34px;"><path d="M10 6.4 A5.6 5.6 0 0 0 6.6 9.4"></path><path d="M6.6 14.6 A5.6 5.6 0 0 0 10 17.6"></path><path d="M14 17.6 A5.6 5.6 0 0 0 17.4 14.6"></path><path d="M17.4 9.4 A5.6 5.6 0 0 0 14 6.4"></path><path d="M10.5 12 H13.5"></path></svg><div style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:#8D95A0;margin-top:8px;">INTEGRACIÓN</div></div>
+      <div style="text-align:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#14161A" stroke-width="1.3" stroke-linecap="round" style="width:34px;height:34px;"><path d="M12 3.6 L19.4 6.6 V11"></path><path d="M19.4 13.5 A8.9 8.9 0 0 1 12 20.4"></path><path d="M12 20.4 A8.9 8.9 0 0 1 4.6 13.5 V6.6 L12 3.6"></path><path d="M12 10 V14"></path></svg><div style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:#8D95A0;margin-top:8px;">SEGURIDAD</div></div>
+      <div style="text-align:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#14161A" stroke-width="1.3" stroke-linecap="round" style="width:34px;height:34px;"><path d="M5.2 5.6 A6.8 2.6 0 0 1 12 4 A6.8 2.6 0 0 1 18.8 5.6"></path><path d="M18.8 7.4 A6.8 2.6 0 0 1 5.2 7.4"></path><path d="M5.2 6.5 V11.6"></path><path d="M18.8 6.5 V11.6"></path><path d="M5.2 11.6 A6.8 2.6 0 0 0 18.8 11.6"></path><path d="M5.2 12.6 V17.5"></path><path d="M18.8 12.6 V17.5"></path><path d="M5.2 17.5 A6.8 2.6 0 0 0 18.8 17.5"></path></svg><div style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:#8D95A0;margin-top:8px;">DATOS</div></div>
+      <div style="text-align:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#14161A" stroke-width="1.3" stroke-linecap="round" style="width:34px;height:34px;"><path d="M7.2 6.6 A3.1 3.1 0 0 1 11.4 7.6"></path><path d="M11.8 10.5 A3.1 3.1 0 0 1 7.4 10.9"></path><path d="M4 19 A5.4 5.4 0 0 1 7.5 14.4"></path><path d="M10.5 14.4 A5.4 5.4 0 0 1 14 19"></path><path d="M16 7 A3.1 3.1 0 0 1 16 12.4"></path><path d="M17.6 15.6 A5.4 5.4 0 0 1 20.4 19"></path></svg><div style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:#8D95A0;margin-top:8px;">CLIENTES</div></div>
+      <div style="text-align:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#14161A" stroke-width="1.3" stroke-linecap="round" style="width:34px;height:34px;"><path d="M13.6 4.7 A6.6 6.6 0 0 1 16.4 11.3"></path><path d="M14.9 15.8 A6.6 6.6 0 0 1 6.2 14.4"></path><path d="M4.4 10.2 A6.6 6.6 0 0 1 9.2 4.6"></path><path d="M15.6 15.6 L20.2 20.2"></path></svg><div style="font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:#8D95A0;margin-top:8px;">CONSULTORÍA</div></div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:14px;">
+      <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:11px;padding:20px 22px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#8D95A0;margin-bottom:12px;">REGLA DE CORTES</div>
+        <div style="font-size:13px;line-height:1.55;color:#5D6670;">Máximo <b style="color:#14161A;">4 cortes</b> por ícono, siempre en un cambio de dirección o cruce. Si el ícono queda ambiguo, se quita el corte — legibilidad antes que estilo. A <b style="color:#14161A;">20px o menos</b> se cierran todos y el ícono pasa a trazo continuo.</div>
+      </div>
+      <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:11px;padding:20px 22px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#8D95A0;margin-bottom:12px;">LINEAL vs. RELLENO</div>
+        <div style="font-size:13px;line-height:1.55;color:#5D6670;"><b style="color:#14161A;">Lineal</b> por defecto: navegación, listas, features, documentos.<br><br><b style="color:#14161A;">Relleno</b> solo en estado activo y confirmaciones — máximo uno por pantalla.</div>
+      </div>
+      <div style="background:#FFF;border:1px solid #D7DBE0;border-radius:11px;padding:20px 22px;display:flex;align-items:flex-end;gap:14px;margin-top:auto;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#14161A" stroke-width="1.3" stroke-linecap="round" style="width:44px;height:44px;"><path d="M14.5 3.9 A8.5 8.5 0 0 1 20.1 9.5"></path><path d="M20.1 14.5 A8.5 8.5 0 0 1 14.5 20.1"></path><path d="M9.5 20.1 A8.5 8.5 0 0 1 3.9 14.5"></path><path d="M3.9 9.5 A8.5 8.5 0 0 1 9.5 3.9"></path><path d="M12 8.6 V15.4"></path></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#14161A" stroke-width="1.4" stroke-linecap="round" style="width:30px;height:30px;"><path d="M14.5 3.9 A8.5 8.5 0 0 1 20.1 9.5"></path><path d="M20.1 14.5 A8.5 8.5 0 0 1 14.5 20.1"></path><path d="M9.5 20.1 A8.5 8.5 0 0 1 3.9 14.5"></path><path d="M3.9 9.5 A8.5 8.5 0 0 1 9.5 3.9"></path><path d="M12 8.6 V15.4"></path></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#14161A" stroke-width="1.6" stroke-linecap="round" style="width:20px;height:20px;"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 8.6 V15.4"></path></svg>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:#8D95A0;line-height:1.5;">48 · 32<br>20 cerrado</div>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8D95A0;border-top:1px solid #D7DBE0;padding-top:14px;margin-top:20px;"><span>ICS · LENGUAJE GRÁFICO</span><span>21</span></div>
+</section>
+
+<!-- 22 · MOTION -->
+<section class="page" style="background:#0E1013;color:#F3F4F4;padding:72px 84px 44px;position:relative;overflow:hidden;display:flex;flex-direction:column;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(#20262D 1.4px,transparent 1.4px);background-size:26px 26px;"></div>
+  <div style="position:relative;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#3FF2A0;margin-bottom:14px;">05 · LENGUAJE GRÁFICO</div>
+  <div style="position:relative;font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;margin-bottom:8px;">MOTION</div>
+  <div style="position:relative;font-size:15px;color:#8D95A0;margin-bottom:28px;max-width:720px;line-height:1.55;">Todo movimiento imita el enfoque de un lente: entra rápido y se asienta seco, sin rebote elástico. Curva base <span style="font-family:'IBM Plex Mono',monospace;">cubic-bezier(.2,.8,.2,1)</span>.</div>
+  <div style="position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;flex:1;">
+    <div style="background:#1B1F25;border-radius:11px;padding:24px;display:flex;flex-direction:column;">
+      <div style="flex:1;display:flex;align-items:center;justify-content:center;gap:12px;">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#5D6670" stroke-width="5.5" stroke-linecap="round" style="width:38px;height:38px;"><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#6D4DF6" stroke="none"></rect></svg>
+        <span style="color:#3A4049;font-size:16px;">→</span>
+        <svg viewBox="0 0 100 100" fill="none" stroke="#F3F4F4" stroke-width="5.5" stroke-linecap="round" style="width:46px;height:46px;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#6D4DF6" stroke="none"></rect></svg>
+      </div>
+      <div style="font-size:16px;font-weight:600;margin-bottom:10px;">M1 · Búsqueda y hallazgo</div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <div style="display:flex;gap:10px;font-size:12.5px;color:#8D95A0;line-height:1.5;"><span style="font-family:'IBM Plex Mono',monospace;color:#6D4DF6;flex:0 0 52px;">0–4s</span><span>Solo arcos y pupila recorriendo la pantalla.</span></div>
+        <div style="display:flex;gap:10px;font-size:12.5px;color:#8D95A0;line-height:1.5;"><span style="font-family:'IBM Plex Mono',monospace;color:#6D4DF6;flex:0 0 52px;">4–5s</span><span>Desacelera y llega al centro.</span></div>
+        <div style="display:flex;gap:10px;font-size:12.5px;color:#8D95A0;line-height:1.5;"><span style="font-family:'IBM Plex Mono',monospace;color:#6D4DF6;flex:0 0 52px;">5–5.7s</span><span>El anillo cierra el logo.</span></div>
+        <div style="display:flex;gap:10px;font-size:12.5px;color:#8D95A0;line-height:1.5;"><span style="font-family:'IBM Plex Mono',monospace;color:#6D4DF6;flex:0 0 52px;">5.7–9s</span><span>Pausa de 3s y reinicia.</span></div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:#5D6670;letter-spacing:.1em;border-top:1px solid #2A2E35;padding-top:12px;margin-top:14px;">INTRO DE VIDEO · CARGA DE WEB · CIERRE</div>
+    </div>
+    <div style="background:#1B1F25;border-radius:11px;padding:24px;display:flex;flex-direction:column;">
+      <div style="flex:1;display:flex;align-items:center;justify-content:center;gap:10px;">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#F3F4F4" stroke-width="5.5" stroke-linecap="round" style="width:42px;height:42px;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#3FF2A0" stroke="none"></rect></svg>
+        <svg viewBox="0 0 100 100" fill="none" stroke="#F3F4F4" stroke-width="5.5" stroke-linecap="round" style="width:42px;height:42px;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="42" width="10" height="16" rx="5" fill="#3FF2A0" stroke="none"></rect></svg>
+      </div>
+      <div style="font-size:16px;font-weight:600;margin-bottom:10px;">M2 · Procesando</div>
+      <div style="font-size:13px;line-height:1.6;color:#8D95A0;">La pupila se contrae y dilata en fósforo: el sistema está trabajando, no el usuario. Loop de 2.4s. Reemplaza cualquier spinner genérico.</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:#5D6670;letter-spacing:.1em;border-top:1px solid #2A2E35;padding-top:12px;margin-top:auto;">SPINNER · ESTADOS DE CARGA</div>
+    </div>
+    <div style="background:#1B1F25;border-radius:11px;padding:24px;display:flex;flex-direction:column;">
+      <div style="flex:1;display:flex;align-items:center;justify-content:center;">
+        <div style="width:100%;height:66px;border-radius:8px;position:relative;overflow:hidden;background:#0E1013;">
+          <div style="position:absolute;inset:0;background-image:radial-gradient(#22282F 1.2px,transparent 1.2px);background-size:18px 18px;"></div>
+          <div style="position:absolute;left:30%;top:0;bottom:0;width:64px;background:linear-gradient(90deg,transparent,rgba(109,77,246,.6),transparent);"></div>
+        </div>
+      </div>
+      <div style="font-size:16px;font-weight:600;margin-bottom:10px;">M3 · Escaneo</div>
+      <div style="font-size:13px;line-height:1.6;color:#8D95A0;">Un haz violeta recorre la trama de puntos y revela el contenido a su paso. 3s, lineal.</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:#5D6670;letter-spacing:.1em;border-top:1px solid #2A2E35;padding-top:12px;margin-top:auto;">TRANSICIÓN DE SECCIÓN · CAMBIO DE SLIDE</div>
+    </div>
+  </div>
+  <div style="position:relative;display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#5D6670;border-top:1px solid #1F242B;padding-top:14px;margin-top:22px;"><span>ICS · LENGUAJE GRÁFICO</span><span>22</span></div>
+</section>
+
+<!-- 23 · PORTADILLA APLICACIONES -->
+<section class="page" style="background:#0E1013;color:#F3F4F4;padding:0;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(#20262D 1.4px,transparent 1.4px);background-size:26px 26px;"></div>
+  <div style="position:absolute;right:-170px;top:-190px;width:680px;height:680px;border-radius:50%;background:radial-gradient(circle,rgba(109,77,246,.38) 0%,rgba(109,77,246,.15) 34%,rgba(63,242,160,.06) 56%,transparent 72%);"></div>
+  <div style="position:relative;padding:0 84px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.24em;color:#3FF2A0;margin-bottom:22px;">SECCIÓN 06</div>
+    <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:88px;line-height:.96;">APLICACIONES</div>
+    <div style="font-size:17px;color:#8D95A0;margin-top:26px;max-width:480px;line-height:1.55;">El sistema completo funcionando en las piezas reales de la marca.</div>
+  </div>
+  <div style="position:absolute;bottom:44px;left:84px;right:84px;display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#5D6670;"><span>ICS · APLICACIONES</span><span>23</span></div>
+</section>
+
+<!-- 24 · APLICACIONES -->
+<section class="page" style="background:#F3F4F4;padding:50px 84px 40px;display:flex;flex-direction:column;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:#6D4DF6;margin-bottom:14px;">06 · APLICACIONES</div>
+  <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:44px;line-height:1;color:#14161A;margin-bottom:26px;">EL SISTEMA APLICADO</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;flex:1;">
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#E4E6E8;border-radius:11px;padding:18px;flex:1;display:flex;align-items:center;">
+        <div style="background:#0E1013;border-radius:7px;width:100%;position:relative;overflow:hidden;padding:18px;">
+          <div style="position:absolute;inset:0;background-image:radial-gradient(#1C2128 1.2px,transparent 1.2px);background-size:18px 18px;"></div>
+          <div style="position:absolute;right:-60px;top:-80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(109,77,246,.4) 0%,rgba(63,242,160,.06) 50%,transparent 72%);"></div>
+          <div style="position:relative;display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+            <div style="display:flex;align-items:center;gap:7px;">
+              <svg viewBox="0 0 100 100" fill="none" stroke="#F3F4F4" stroke-width="6" stroke-linecap="round" style="width:15px;height:15px;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#F3F4F4" stroke="none"></rect></svg>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:8px;color:#F3F4F4;letter-spacing:.16em;">ICS</span>
+            </div>
+            <div style="background:#6D4DF6;color:#FFF;font-size:7px;font-weight:600;padding:5px 9px;border-radius:5px;">Diagnóstico</div>
+          </div>
+          <div style="position:relative;font-family:'ABC','Space Grotesk',sans-serif;font-size:17px;color:#F3F4F4;line-height:1.08;">EXPLORAMOS TUS PROCESOS</div>
+          <div style="position:relative;font-size:8px;color:#8D95A0;margin-top:8px;line-height:1.5;">Identificamos lo que le sirve a tu operación e implementamos soluciones con IA.</div>
+          <div style="position:relative;display:flex;gap:6px;margin-top:12px;">
+            <div style="background:#6D4DF6;color:#FFF;font-size:7.5px;font-weight:600;padding:6px 10px;border-radius:5px;">Descubre tu fricción</div>
+            <div style="border:1px solid #2A2E35;color:#8D95A0;font-size:7.5px;padding:6px 10px;border-radius:5px;">Cómo funciona</div>
+          </div>
+        </div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8D95A0;margin-top:11px;letter-spacing:.12em;">SITIO WEB · HERO</div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#E4E6E8;border-radius:11px;padding:18px;flex:1;display:flex;align-items:center;">
+        <div style="background:#F3F4F4;border:1px solid #D7DBE0;border-radius:7px;width:100%;display:flex;overflow:hidden;">
+          <div style="width:36px;background:#0E1013;padding:12px 0;display:flex;flex-direction:column;align-items:center;gap:11px;">
+            <svg viewBox="0 0 100 100" fill="none" stroke="#6D4DF6" stroke-width="7" stroke-linecap="round" style="width:14px;height:14px;"><circle cx="50" cy="50" r="41"></circle><rect x="44" y="34" width="12" height="32" rx="6" fill="#6D4DF6" stroke="none"></rect></svg>
+            <div style="width:11px;height:2px;background:#2A2E35;border-radius:1px;"></div><div style="width:11px;height:2px;background:#2A2E35;border-radius:1px;"></div><div style="width:11px;height:2px;background:#2A2E35;border-radius:1px;"></div>
+          </div>
+          <div style="flex:1;padding:14px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:7px;letter-spacing:.14em;color:#8D95A0;">FRICCIÓN DETECTADA</div>
+            <div style="display:flex;gap:7px;margin-top:9px;">
+              <div style="flex:1;background:#FFF;border:1px solid #E4E7EA;border-radius:5px;padding:8px;"><div style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:#14161A;">-42%</div><div style="font-size:6.5px;color:#8D95A0;margin-top:2px;">tiempo proceso</div></div>
+              <div style="flex:1;background:#FFF;border:1px solid #E4E7EA;border-radius:5px;padding:8px;"><div style="font-family:'IBM Plex Mono',monospace;font-size:14px;color:#14161A;">18h</div><div style="font-size:6.5px;color:#8D95A0;margin-top:2px;">ahorro semanal</div></div>
+            </div>
+            <div style="background:#FFF;border:1px solid #E4E7EA;border-radius:5px;padding:9px;margin-top:7px;height:48px;display:flex;align-items:flex-end;gap:3px;">
+              <div style="flex:1;height:40%;background:#E4E7EA;border-radius:1px;"></div><div style="flex:1;height:62%;background:#E4E7EA;border-radius:1px;"></div><div style="flex:1;height:35%;background:#E4E7EA;border-radius:1px;"></div><div style="flex:1;height:78%;background:#6D4DF6;border-radius:1px;"></div><div style="flex:1;height:52%;background:#E4E7EA;border-radius:1px;"></div><div style="flex:1;height:88%;background:#E4E7EA;border-radius:1px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8D95A0;margin-top:11px;letter-spacing:.12em;">DASHBOARD · PRODUCTO</div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#E4E6E8;border-radius:11px;padding:18px;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+        <div style="width:100%;max-width:200px;aspect-ratio:1.7;background:#0E1013;border-radius:7px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;">
+          <div style="position:absolute;right:-26px;bottom:-26px;width:96px;height:96px;border:1px solid #1F242B;border-radius:50%;"></div>
+          <svg viewBox="0 0 100 100" fill="none" stroke="#6D4DF6" stroke-width="5.5" stroke-linecap="round" style="width:22px;height:22px;position:relative;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#6D4DF6" stroke="none"></rect></svg>
+          <div style="position:relative;">
+            <div style="font-size:10px;font-weight:600;color:#F3F4F4;">Nombre Apellido</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:6px;color:#5D6670;letter-spacing:.12em;margin-top:2px;">EXPLORADOR DE PROCESOS</div>
+          </div>
+        </div>
+        <div style="width:100%;max-width:200px;aspect-ratio:1.7;background:#F3F4F4;border:1px solid #D7DBE0;border-radius:7px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;">
+          <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:18px;color:#14161A;">ICS</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:6px;color:#8D95A0;line-height:1.7;">HOLA@IRISCORE.SOLUTIONS<br>+57 000 000 0000</div>
+        </div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8D95A0;margin-top:11px;letter-spacing:.12em;">TARJETA · TIRO Y RETIRO</div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#E4E6E8;border-radius:11px;padding:18px;flex:1;display:flex;gap:9px;align-items:center;justify-content:center;">
+        <div style="width:47%;aspect-ratio:.8;background:#0E1013;border-radius:6px;padding:12px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background-image:radial-gradient(#1E242B 1.1px,transparent 1.1px);background-size:14px 14px;"></div>
+          <div style="position:relative;font-family:'IBM Plex Mono',monospace;font-size:6px;color:#3FF2A0;letter-spacing:.14em;">● FRICCIÓN 01</div>
+          <div style="position:relative;font-family:'ABC','Space Grotesk',sans-serif;font-size:15px;color:#F3F4F4;line-height:1.06;">18 HORAS EN EXCEL</div>
+        </div>
+        <div style="width:47%;aspect-ratio:.8;background:#6D4DF6;border-radius:6px;padding:12px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;">
+          <div style="position:absolute;left:-22px;bottom:-30px;width:110px;height:110px;border:1px solid rgba(255,255,255,.26);border-radius:50%;"></div>
+          <svg viewBox="0 0 100 100" fill="none" stroke="#FFF" stroke-width="6" stroke-linecap="round" style="width:17px;height:17px;position:relative;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#FFF" stroke="none"></rect></svg>
+          <div style="position:relative;font-family:'ABC','Space Grotesk',sans-serif;font-size:13px;color:#FFF;line-height:1.08;">¿Y SI NADIE TUVIERA QUE HACERLO?</div>
+        </div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8D95A0;margin-top:11px;letter-spacing:.12em;">INSTAGRAM · CARRUSEL 4:5</div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#E4E6E8;border-radius:11px;padding:18px;flex:1;display:flex;align-items:center;">
+        <div style="width:100%;aspect-ratio:16/9;background:#0E1013;border-radius:7px;padding:18px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;">
+          <div style="position:absolute;left:18px;right:18px;top:52%;height:1px;background:#1F242B;"></div>
+          <div style="position:absolute;left:40%;top:18px;bottom:18px;width:1px;background:#1F242B;"></div>
+          <div style="position:relative;display:flex;justify-content:space-between;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:6.5px;color:#5D6670;letter-spacing:.16em;">PASO 02 · DISEÑAR</div>
+            <svg viewBox="0 0 100 100" fill="none" stroke="#3A4049" stroke-width="7" stroke-linecap="round" style="width:12px;height:12px;"><circle cx="50" cy="50" r="41"></circle><rect x="44" y="34" width="12" height="32" rx="6" fill="#3A4049" stroke="none"></rect></svg>
+          </div>
+          <div style="position:relative;">
+            <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:24px;color:#F3F4F4;line-height:1;">CONOS</div>
+            <div style="font-size:7.5px;color:#8D95A0;margin-top:7px;max-width:180px;line-height:1.5;">Propuesta y creación del agente y la estrategia, ajustados a la necesidad real del cliente.</div>
+          </div>
+        </div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8D95A0;margin-top:11px;letter-spacing:.12em;">PRESENTACIÓN · LÁMINA DE PROCESO</div>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="background:#E4E6E8;border-radius:11px;padding:18px;flex:1;display:flex;gap:12px;align-items:center;justify-content:center;">
+        <div style="width:44%;aspect-ratio:.6;background:#0E1013;border-radius:4px;padding:13px 11px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;">
+          <div style="position:absolute;left:-30px;bottom:-30px;width:120px;height:120px;border:1px solid #1F242B;border-radius:50%;"></div>
+          <div style="position:absolute;left:-12px;bottom:-12px;width:84px;height:84px;border:1px solid #1F242B;border-radius:50%;"></div>
+          <svg viewBox="0 0 100 100" fill="none" stroke="#F3F4F4" stroke-width="6" stroke-linecap="round" style="width:19px;height:19px;position:relative;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#F3F4F4" stroke="none"></rect></svg>
+          <div style="position:relative;">
+            <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:12px;color:#F3F4F4;line-height:1.08;">ENCONTRAMOS LA FRICCIÓN</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:5px;color:#6D4DF6;letter-spacing:.18em;margin-top:7px;">IRISCORE.SOLUTIONS</div>
+          </div>
+        </div>
+        <div style="width:34%;aspect-ratio:.82;background:#F3F4F4;border:1px solid #D7DBE0;border-radius:4px;display:flex;align-items:center;justify-content:center;align-self:flex-end;">
+          <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:14px;color:#14161A;transform:rotate(-90deg);">ICS</div>
+        </div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8D95A0;margin-top:11px;letter-spacing:.12em;">ROLL-UP + CUADERNO</div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#8D95A0;border-top:1px solid #D7DBE0;padding-top:14px;margin-top:20px;"><span>ICS · APLICACIONES</span><span>24</span></div>
+</section>
+
+<!-- 25 · CIERRE -->
+<section class="page" style="background:#0E1013;color:#F3F4F4;padding:0;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(#20262D 1.4px,transparent 1.4px);background-size:26px 26px;"></div>
+  <div style="position:absolute;left:-200px;bottom:-280px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(109,77,246,.40) 0%,rgba(109,77,246,.16) 34%,rgba(63,242,160,.07) 56%,transparent 72%);"></div>
+  <div style="position:relative;padding:72px 84px 0;display:flex;justify-content:space-between;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.22em;color:#5D6670;">FIN DEL MANUAL</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.22em;color:#3FF2A0;">V1 · 2026</div>
+  </div>
+  <div style="position:relative;padding:0 84px;">
+    <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:58px;line-height:1.02;max-width:800px;">NOSOTROS CREAMOS LA TECNOLOGÍA Y LA EXPERTICIA. TÚ LA TRANSFORMAS EN EFICIENCIA CADA DÍA.</div>
+  </div>
+  <div style="position:relative;padding:0 84px 64px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;">
+    <div style="display:flex;align-items:center;gap:16px;">
+      <svg viewBox="0 0 100 100" fill="none" stroke="#F3F4F4" stroke-width="5.5" stroke-linecap="round" style="width:44px;height:44px;flex:0 0 auto;"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#F3F4F4" stroke="none"></rect></svg>
+      <div style="font-family:'ABC','Space Grotesk',sans-serif;font-size:19px;line-height:1.1;">IRIS CORE<br>SOLUTION</div>
+    </div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#5D6670;text-align:right;line-height:2;">HOLA@IRISCORE.SOLUTIONS<br>IRISCORE.SOLUTIONS</div>
+  </div>
+</section>
+
+</doc-page>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#0E1013"/><circle cx="100" cy="100" r="52" fill="none" stroke="#F3F4F4" stroke-width="7"/><path d="M70 85 A39 39 0 0 1 94 65" fill="none" stroke="#F3F4F4" stroke-width="7" stroke-linecap="round"/><rect x="94" y="79" width="12" height="42" rx="6" fill="#6D4DF6"/></svg></template>
+
+</x-dc>
+</body>
+</html>

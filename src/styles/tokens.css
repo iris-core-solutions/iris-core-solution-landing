@@ -1,0 +1,47 @@
+/*
+  Iris Core Solution — design tokens
+  Fuente: brand/ICS-Brandbook-v1.html (Manual de Identidad Visual v1 · 2026)
+*/
+
+:root {
+  /* Color — nombres del manual de marca */
+  --ics-carbon: #0E1013;      /* fondo oscuro / texto sobre claro · 50-70% de superficie */
+  --ics-surface: #1B1F25;     /* superficie elevada sobre carbón */
+  --ics-steel: #5D6670;       /* texto secundario, bordes, ejes — sin límite de uso */
+  --ics-mist: #F3F4F4;        /* fondo modo claro / texto sobre oscuro */
+  --ics-fog: #8D95A0;         /* texto terciario / mono secundario */
+  --ics-border: #D7DBE0;      /* bordes sobre fondo claro */
+  --ics-border-soft: #E4E7EA;
+  --ics-violet: #6D4DF6;      /* acento accionable — CTA, links, foco. Máx. ~8%, 1 CTA por vista */
+  --ics-violet-hover: #5436D4;
+  --ics-violet-tint: #D9CFFD;
+  --ics-phosphor: #3FF2A0;    /* acento informativo — datos en vivo, estados. Máx. ~5%. NUNCA clicable */
+  --ics-danger: #C0392B;
+
+  /* Tipografía */
+  --font-display: 'ABC', 'Space Grotesk', sans-serif;   /* solo titulares, caja alta, máx. 6 palabras */
+  --font-body: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;               /* etiquetas, cifras, datos */
+
+  /* Escala tipográfica (ver brand/BRANDBOOK.md → Tipografía) */
+  --text-display: clamp(2.5rem, 5vw, 4.75rem); /* 36–120px, ABC, line-height .98–1.02 */
+  --text-subtitle: clamp(1.25rem, 2vw, 1.875rem); /* 20–30px, Space Grotesk 500 */
+  --text-body: 1rem;       /* 15–17px, Space Grotesk 400, line-height 1.6 */
+  --text-label: 0.75rem;   /* 10–13px, mono, tracking +14% */
+  --text-figure: clamp(1.5rem, 3vw, 2.5rem); /* 24–40px, mono 500 */
+
+  /* Motion — "enfoque de lente": entra rápido, se asienta seco, sin rebote */
+  --ease-focus: cubic-bezier(.2, .8, .2, 1);
+
+  /* Retícula */
+  --dot-grid-color: #20262D;
+  --dot-grid-size: 26px;
+  --radius-card: 12px;
+  --radius-pill: 18px;
+}
+
+@font-face {
+  font-family: 'ABC';
+  src: url('../../brand/assets/fonts/Abc-tuned.ttf') format('truetype');
+  font-display: block;
+}
