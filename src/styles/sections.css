@@ -1,0 +1,665 @@
+/*
+  Secciones, en el orden en que aparecen en index.html.
+  Ritmo de fondos (DESIGN.md): oscuro–oscuro → claro–claro–claro → oscuro–oscuro.
+*/
+
+/* ============================================================ NAV */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(14, 16, 19, .82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--ics-hairline);
+}
+.nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 72px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ics-mist);
+  font-family: var(--font-display);
+  font-size: 15px;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.nav-logo:hover { color: var(--ics-mist); }
+/* El texto mide 26px de alto; el padding lleva el área tocable a 46. */
+.nav-logo { padding: 10px 0; }
+.nav-logo svg { width: 26px; height: 26px; flex: 0 0 auto; }
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 14px;
+}
+.nav-links a { color: var(--ics-fog); }
+.nav-links a:hover { color: var(--ics-mist); }
+
+/* Solo existe en el desplegable móvil: en escritorio ese destino lo cubre el botón del nav. */
+.nav-links-contact { display: none; }
+
+/* Un solo CTA violeta por vista: el del nav aparece cuando el del hero ya salió de pantalla */
+.nav-cta {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition:
+    opacity .2s var(--ease-focus),
+    transform .2s var(--ease-focus),
+    visibility .2s var(--ease-focus);
+}
+.nav.is-past-hero .nav-cta {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+/* Dentro de la sección de contacto el CTA del formulario es el violeta de la vista; dejar
+   también el del nav pondría dos botones violeta compitiendo en la misma pantalla. */
+.nav.is-at-contact .nav-cta {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+}
+
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--ics-hairline-strong);
+  border-radius: 8px;
+  color: var(--ics-mist);
+  cursor: pointer;
+}
+.nav-toggle svg { width: 18px; height: 18px; }
+
+/* ============================================================ HERO */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--ics-carbon);
+  color: var(--ics-mist);
+  padding: 96px 0 88px;
+}
+.hero .wrap { position: relative; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.hero-eyebrow { margin-bottom: 22px; }
+.hero h1 { margin-bottom: 26px; }
+.hero .lead { margin-bottom: 36px; max-width: 46ch; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ------------------------------- El visor: la tesis, no una ilustración */
+
+.viewer {
+  background: var(--ics-surface);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--ics-hairline);
+  overflow: hidden;
+}
+
+.viewer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--ics-hairline);
+}
+
+.viewer-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ics-phosphor);
+}
+.viewer-status svg { width: 14px; height: 14px; flex: 0 0 auto; }
+
+/* Procesando = la pupila se contrae y dilata. Reemplaza cualquier spinner genérico. */
+.viewer-status .pupil { transform-origin: 50% 50%; }
+.viewer.is-scanning .viewer-status .pupil { animation: pupil-focus 2.4s var(--ease-focus) infinite; }
+
+@keyframes pupil-focus {
+  0%, 100% { transform: scaleY(1); }
+  50%      { transform: scaleY(.42); }
+}
+
+.viewer-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+}
+
+.viewer-menu {
+  position: relative;
+  padding: 22px 20px 24px;
+  border-right: 1px solid var(--ics-hairline);
+  overflow: hidden;
+}
+
+.viewer-place {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  color: var(--ics-fog);
+  margin: 0 0 16px;
+}
+
+.menu-lines {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ics-fog);
+}
+
+/* La evidencia se enciende en fósforo. El fósforo informa: nunca es clicable. */
+.menu-lines mark {
+  background: transparent;
+  color: inherit;
+  border-radius: 3px;
+  padding: 1px 3px;
+  margin: 0 -3px;
+  transition:
+    color .24s var(--ease-focus),
+    background-color .24s var(--ease-focus);
+}
+.menu-lines mark.is-found {
+  color: var(--ics-phosphor);
+  background: rgba(63, 242, 160, .10);
+}
+
+/* Haz de escaneo: violeta, lineal, recorre la carta */
+.scan-beam {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 64px;
+  opacity: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(109, 77, 246, .16) 55%,
+    rgba(109, 77, 246, .55) 82%,
+    rgba(109, 77, 246, 0) 100%
+  );
+  border-bottom: 1px solid var(--ics-violet);
+}
+.viewer.is-scanning .scan-beam {
+  opacity: 1;
+  animation: scan-sweep 3s linear infinite;
+}
+
+@keyframes scan-sweep {
+  from { transform: translateY(-64px); }
+  to   { transform: translateY(100%); }
+}
+
+/* ------------------------------- Ficha de evidencia */
+
+.evidence {
+  margin: 0;
+  padding: 22px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* La ficha es legible por defecto. Solo el script la oculta para revelarla, y solo si va a
+   animarla: sin JS, el contenido está ahí completo. */
+.evidence-row {
+  transition:
+    opacity .28s var(--ease-focus),
+    transform .28s var(--ease-focus);
+}
+.viewer.is-armed .evidence-row { opacity: 0; transform: translateY(6px); }
+.viewer.is-armed .evidence-row.is-in { opacity: 1; transform: none; }
+
+.evidence dt {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ics-fog);
+  margin-bottom: 5px;
+}
+.evidence dd {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ics-mist);
+}
+.evidence dd.is-data { color: var(--ics-phosphor); }
+
+.viewer-foot {
+  padding: 12px 18px 14px;
+  border-top: 1px solid var(--ics-hairline);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .08em;
+  line-height: 1.5;
+  color: var(--ics-fog);
+}
+
+/* ============================================================ APLICACIONES */
+
+.product-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border: 1px solid var(--ics-hairline-strong);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ics-fog);
+  margin-bottom: 28px;
+}
+
+.dimensions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1px;
+  background: var(--ics-hairline);
+  border: 1px solid var(--ics-hairline);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+.dimension {
+  background: var(--ics-carbon);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dimension h3 {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ics-phosphor);
+  margin: 0;
+}
+.dimension p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ics-fog);
+}
+
+/* La octava celda cierra la retícula y lleva el argumento: el instrumento explica su propia
+   regla en vez de dejar un hueco. */
+.dimension-note { background: var(--ics-surface); }
+.dimension-note h3 { color: var(--ics-violet-tint); }
+.dimension-note p { color: var(--ics-mist); }
+
+/* ============================================================ QUÉ SOMOS */
+
+.somos-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+.statement {
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+  max-width: 26ch;
+  color: var(--ics-carbon);
+}
+.somos-grid .prose + .prose { margin-top: 18px; }
+
+/* ============================================================ PROCESOS */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: var(--space-block);
+}
+.step {
+  background: #fff;
+  border: 1px solid var(--ics-border);
+  border-radius: var(--radius-card);
+  padding: 28px var(--space-card);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.step .label { margin-bottom: 2px; }
+/* Subtítulo, no titular: ABC va un solo bloque por vista y esa cuota la gasta el H2. */
+.step h3 {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ics-carbon);
+}
+.step p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ics-steel);
+}
+
+.pipeline-head { margin-bottom: 22px; }
+
+.pipeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  border-top: 1px solid var(--ics-border);
+}
+.pipeline li {
+  position: relative;
+  padding: 18px 12px 0 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .06em;
+  line-height: 1.4;
+  color: var(--ics-steel);
+}
+.pipeline li::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  /* Acero, no violeta: ninguno de estos ocho pasos es clicable. */
+  background: var(--ics-steel);
+}
+.pipeline li span {
+  display: block;
+  color: var(--ics-carbon);
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+/* ============================================================ VALORES */
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.value {
+  padding-top: 18px;
+  border-top: 1px solid var(--ics-border);
+}
+.value h3 {
+  font-family: var(--font-body);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 10px;
+  color: var(--ics-carbon);
+}
+.value p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ics-steel);
+}
+
+/* ============================================================ CONTACTO */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.manifesto {
+  margin-top: 32px;
+  padding-left: 18px;
+  border-left: 2px solid var(--ics-phosphor);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ics-mist);
+  max-width: 40ch;
+}
+
+.contact-direct {
+  margin-top: 28px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .08em;
+  line-height: 1.9;
+  color: var(--ics-fog);
+}
+.contact-direct a {
+  display: inline-block;
+  padding: 12px 0;
+  color: var(--ics-mist);
+  border-bottom: 1px solid var(--ics-hairline-strong);
+}
+.contact-direct a:hover { color: var(--ics-phosphor); border-color: var(--ics-phosphor); }
+
+.form {
+  background: var(--ics-surface);
+  border: 1px solid var(--ics-hairline);
+  border-radius: var(--radius-card);
+  padding: 28px var(--space-card);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ics-fog);
+}
+.field input,
+.field textarea {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--ics-mist);
+  background: var(--ics-carbon);
+  border: 1px solid var(--ics-hairline-strong);
+  border-radius: 8px;
+  padding: 12px 14px;
+  min-height: 44px;
+  transition: border-color .18s var(--ease-focus);
+}
+.field textarea { min-height: 96px; resize: vertical; }
+.field input:focus,
+.field textarea:focus { border-color: var(--ics-violet); }
+.field input::placeholder,
+.field textarea::placeholder { color: var(--ics-steel); }
+
+.form-note {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .08em;
+  line-height: 1.7;
+  color: var(--ics-fog);
+  margin: 0;
+}
+.form-note a { color: var(--ics-violet-tint); }
+.form-note a:hover { color: var(--ics-mist); }
+
+.form-status {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ics-phosphor);
+}
+.form-status:empty { display: none; }
+
+/* ============================================================ FOOTER */
+
+footer.foot {
+  background: var(--ics-carbon);
+  color: var(--ics-fog);
+  padding: 44px 0;
+  border-top: 1px solid var(--ics-hairline);
+}
+footer.foot .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+}
+.foot-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ics-mist);
+  font-family: var(--font-display);
+  font-size: 15px;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+}
+.foot-brand svg { width: 22px; height: 22px; }
+footer.foot a {
+  display: inline-block;
+  padding: 8px 0;
+  color: var(--ics-fog);
+}
+footer.foot a:hover { color: var(--ics-mist); }
+
+/* ============================================================ RESPONSIVE */
+
+/* Cuando el pipeline se parte en varias filas, cada paso se vuelve autónomo: su propia línea
+   y su propio punto. Si no, el punto de una fila queda colgando bajo el texto de la anterior. */
+@media (max-width: 1080px) {
+  .pipeline {
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 0;
+    column-gap: 16px;
+    row-gap: 24px;
+  }
+  .pipeline li {
+    padding: 20px 0 0;
+    border-top: 1px solid var(--ics-border);
+  }
+  .pipeline li::before { top: -4px; }
+}
+
+@media (max-width: 980px) {
+  .hero-grid,
+  .somos-grid,
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero { padding: 72px 0; }
+  .steps { grid-template-columns: 1fr; }
+  .values { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+}
+
+@media (max-width: 860px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 72px;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 24px 16px;
+    background: var(--ics-carbon);
+    border-bottom: 1px solid var(--ics-hairline);
+  }
+  .nav-links a {
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--ics-hairline);
+  }
+  .nav-links.is-open { display: flex; }
+  /* `.nav-links a` le gana por especificidad a la clase sola: hay que calificarla. */
+  .nav-links a.nav-links-contact {
+    display: block;
+    color: var(--ics-violet-tint);
+    font-weight: 600;
+  }
+  .nav-links a.nav-links-contact:hover { color: var(--ics-mist); }
+  .nav-toggle { display: inline-flex; }
+  .nav-cta { display: none; }
+
+  .viewer-body { grid-template-columns: 1fr; }
+  .viewer-menu { border-right: 0; border-bottom: 1px solid var(--ics-hairline); }
+}
+
+@media (max-width: 560px) {
+  .pipeline { grid-template-columns: repeat(2, 1fr); }
+  .values { grid-template-columns: 1fr; }
+
+  /* Botones apilados de anchos distintos se ven descuadrados; a un dedo le sirve el bloque. */
+  .hero-actions { flex-direction: column; align-items: stretch; }
+
+  /* El primer viewport tiene que mostrar el mecanismo, no un titular y un botón — eso es
+     justo el hero genérico que la tesis rechaza. Se aprieta lo de arriba para que al menos
+     una línea encendida de la carta quede sobre el pliegue. */
+  .hero { padding: 36px 0 56px; }
+  .hero-grid { gap: 24px; }
+  /* El display a 40px se come tres líneas y empuja el visor fuera del pliegue. */
+  .hero h1.display { font-size: 2.05rem; }
+  .hero-eyebrow { margin-bottom: 14px; }
+  .hero h1 { margin-bottom: 18px; }
+  .hero .lead { font-size: 16px; margin-bottom: 22px; }
+  .hero-actions .btn { padding: 11px 20px; }
+
+  /* La barra del visor no alcanza para etiqueta y estado en la misma línea. */
+  .viewer-bar { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+
+/* ============================================================ MOVIMIENTO REDUCIDO
+   No es una degradación: es la condición para que la animación exista.
+   El visor muestra su estado final, completo y legible. */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+
+  .scan-beam { display: none; }
+  .viewer.is-armed .evidence-row { opacity: 1; transform: none; }
+}

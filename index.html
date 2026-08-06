@@ -5,127 +5,403 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Iris Core Solution — Encontramos la fricción que nadie ve</title>
 <meta name="description" content="Iris Core Solution encuentra y libera las fricciones ocultas en los procesos de tu empresa, aplicando inteligencia artificial de forma práctica y accesible.">
+
+<!-- La ruta de llegada real es un link reenviado dentro de un comité: la vista previa importa.
+     TODO: agregar og:image (1200×630) cuando exista la pieza. -->
+<link rel="canonical" href="https://iriscore.solutions/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Iris Core Solution">
+<meta property="og:locale" content="es_CO">
+<meta property="og:url" content="https://iriscore.solutions/">
+<meta property="og:title" content="Iris Core Solution — Encontramos la fricción que nadie ve">
+<meta property="og:description" content="Prospección con evidencia: cada cuenta con el motivo por el que aparece, la fuente del dato y el nivel de confianza. No una lista.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Iris Core Solution — Encontramos la fricción que nadie ve">
+<meta name="twitter:description" content="Prospección con evidencia: cada cuenta con el motivo por el que aparece, la fuente del dato y el nivel de confianza. No una lista.">
+
+<!--
+  CONTRATO DE DIRECCIÓN  ·  ver DESIGN.md y PRODUCT.md
+
+  THESIS — Iris no vende "IA". Vende el hallazgo trazable: por qué este lugar es un cliente
+  potencial y de dónde salió el dato. Esta página rechaza el hero de agencia-de-IA genérica
+  (abstracción más "transformamos tu negocio") mostrando el mecanismo funcionando de entrada.
+
+  OWN-WORLD — Instrumento óptico y ficha de evidencia. Carbón dominante, trama de puntos como
+  territorio sin explorar, círculos concéntricos como hallazgo. Violeta acciona, fósforo informa,
+  nunca al revés. Mono para nombres de campo, procedencia y confianza. ABC caja alta solo en
+  titulares.
+
+  STORY — Entiendo qué hace Iris, veo el mecanismo operando, sigo el método que lo sostiene,
+  reconozco en qué creen, escribo.
+
+  FIRST VIEWPORT — Dos columnas. Izquierda: titular ABC, promesa, acción. Derecha: el visor —
+  una carta de restaurante que un haz recorre, la evidencia se enciende en fósforo, y al lado se
+  arma la ficha con procedencia y confianza. El CTA primario vive abajo a la izquierda.
+
+  FORM — Estructura tomada de los borradores del fundador; el mundo visual se hereda del manual
+  de marca v1. Sin concept-seed: la petición trae su estructura ya especificada.
+-->
+
+<link rel="preload" href="brand/assets/fonts/Abc-tuned.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='42' fill='%230E1013'/%3E%3Cpath d='M27 37 A29 29 0 0 1 45 22.5' fill='none' stroke='%23F3F4F4' stroke-width='5.5' stroke-linecap='round'/%3E%3Cpath d='M73 63 A29 29 0 0 1 55 77.5' fill='none' stroke='%23F3F4F4' stroke-width='5.5' stroke-linecap='round'/%3E%3Crect x='45' y='35' width='10' height='30' rx='5' fill='%23F3F4F4'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="src/styles/main.css">
 </head>
 <body>
 
-<nav class="nav">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<nav class="nav on-dark" id="nav">
   <div class="wrap">
-    <div class="nav-logo">
-      <svg viewBox="0 0 100 100" fill="none" stroke="#F3F4F4" stroke-width="5.5" stroke-linecap="round"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#F3F4F4" stroke="none"></rect></svg>
-      IRIS CORE SOLUTION
+    <a class="nav-logo" href="#inicio">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round" aria-hidden="true"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="currentColor" stroke="none"></rect></svg>
+      Iris Core Solution
+    </a>
+
+    <div class="nav-links" id="nav-links">
+      <!-- El orden sigue al del documento: quien baje por el menú nunca retrocede. -->
+      <a href="#aplicaciones">Aplicaciones</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#procesos">Procesos</a>
+      <!-- En móvil el CTA del nav se oculta; sin este enlace no habría cómo llegar a contacto. -->
+      <a class="nav-links-contact" href="#contacto">Contáctanos</a>
     </div>
-    <div class="nav-links">
-      <a href="#proceso">Proceso</a>
-      <a href="#fricciones">Fricciones</a>
-      <a href="#resultados">Resultados</a>
-    </div>
-    <a class="btn btn-primary" href="#cta">Descubre tu fricción</a>
+
+    <a class="btn btn-primary nav-cta" href="#contacto">Contáctanos</a>
+
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+      <span class="sr-only">Abrir menú</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18"></path><path d="M3 12h18"></path><path d="M3 18h18"></path></svg>
+    </button>
   </div>
 </nav>
 
-<header class="hero">
+<main id="contenido">
+
+<!-- ============================================ HERO · trama + halo (único halo del sitio) -->
+<header class="hero on-dark dot-grid halo" id="inicio">
   <div class="wrap">
-    <div class="label hero-eyebrow">EXPLORADOR DE PROCESOS · IA APLICADA</div>
-    <h1>Encontramos la fricción<br>que nadie ve</h1>
-    <p class="lead">La liberamos con inteligencia artificial. Identificamos lo que le sirve a tu operación e implementamos soluciones reales — sin exigir conocimiento técnico de tu equipo.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#cta">Descubre tu fricción</a>
-      <a class="btn btn-ghost" href="#proceso">Cómo funciona</a>
+    <div class="hero-grid">
+
+      <div>
+        <!-- En Fog, no en fósforo: esto es posicionamiento, no un dato que reporte el sistema.
+             El primer fósforo que ve el visitante tiene que ser evidencia real, en el visor. -->
+        <p class="label label-muted hero-eyebrow">IA native · Prospección con evidencia</p>
+        <h1 class="display">Encontramos la fricción que nadie ve</h1>
+        <p class="lead muted">
+          Somos IA native: cada producto que entregamos nace potenciado con inteligencia
+          artificial y se implementa dentro de tu operación, no al lado de ella. Con nosotros
+          no te quedas atrás.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contacto">Descubre tu fricción</a>
+          <a class="btn btn-ghost" href="#aplicaciones">Ver el mecanismo</a>
+        </div>
+      </div>
+
+      <!-- El visor. Datos ilustrativos autorados; el aviso vive dentro del componente. -->
+      <div class="viewer" id="viewer">
+        <div class="viewer-bar">
+          <p class="label label-muted">Carta pública · ejemplo ilustrativo</p>
+          <p class="viewer-status">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" aria-hidden="true">
+              <circle cx="50" cy="50" r="40"></circle>
+              <rect class="pupil" x="43" y="30" width="14" height="40" rx="7" fill="currentColor" stroke="none"></rect>
+            </svg>
+            <span id="viewer-status-text">En espera</span>
+          </p>
+        </div>
+
+        <div class="viewer-body">
+          <div class="viewer-menu">
+            <p class="viewer-place">Asadero El Ventanal · Chapinero, Bogotá</p>
+            <ul class="menu-lines">
+              <li>Ajiaco santafereño con <mark data-evidence="1">crema de leche</mark> y alcaparras</li>
+              <li>Almojábanas de <mark data-evidence="2">cuajada</mark> recién horneadas</li>
+              <li>Sándwich de jamón y <mark data-evidence="3">quesito</mark> campesino</li>
+              <li>Postre de arequipe con <mark data-evidence="4">kumis</mark> natural</li>
+              <li>Carne a la llanera con papa criolla</li>
+              <li>Sopa del día y menú ejecutivo de lunes a viernes</li>
+              <li>Jugos naturales en agua o en leche</li>
+            </ul>
+            <div class="scan-beam" aria-hidden="true"></div>
+          </div>
+
+          <dl class="evidence" id="evidence">
+            <div class="evidence-row">
+              <dt>Categoría detectada</dt>
+              <dd class="is-data">Lácteos frescos</dd>
+            </div>
+            <div class="evidence-row">
+              <dt>Referencias en carta</dt>
+              <dd>crema de leche · cuajada · quesito · kumis</dd>
+            </div>
+            <div class="evidence-row">
+              <dt>Señal</dt>
+              <dd>Preparación propia en sitio, cuatro referencias lácteas distintas</dd>
+            </div>
+            <div class="evidence-row">
+              <dt>Procedencia</dt>
+              <dd>Carta publicada en ficha pública, texto literal</dd>
+            </div>
+            <div class="evidence-row">
+              <dt>Confianza</dt>
+              <dd>Media-alta — sin inferencia de marca</dd>
+            </div>
+            <div class="evidence-row">
+              <dt>Estado</dt>
+              <dd>Pendiente de validación humana</dd>
+            </div>
+          </dl>
+        </div>
+
+        <p class="viewer-foot">
+          Ejemplo ilustrativo. El establecimiento, la carta y los datos son ficticios, y sirven
+          para mostrar el mecanismo — no son un resultado medido.
+        </p>
+      </div>
+
     </div>
   </div>
 </header>
 
-<section id="proceso" class="process">
+<!-- ============================================ APLICACIONES · concéntricos -->
+<section class="section section-dark on-dark rings" id="aplicaciones">
   <div class="wrap">
-    <div class="label section-eyebrow">CÓMO TRABAJAMOS</div>
-    <h2 class="section-title">Tres pasos, un mismo enfoque</h2>
-    <p class="section-sub">Acompañamos de principio a fin: del análisis profundo hasta la implementación en tu operación.</p>
-    <div class="process-grid">
-      <article class="process-card">
-        <div class="process-step">PASO 01 · ENFOCAR</div>
-        <h3>Córnea</h3>
-        <p>Análisis profundo de la empresa mediante entrevistas y herramientas de recopilación. La IA entra desde el inicio.</p>
+    <div class="section-head">
+      <p class="label label-violet">Aplicaciones</p>
+      <h2 class="display">Iris Prospect OS</h2>
+      <p class="prose muted">
+        Convierte lo que tu equipo comercial ya sabe en un perfil de cliente estructurado, y lo
+        usa para encontrar cuentas reales. Lo que entregamos no es una lista: es cada cuenta con
+        el motivo por el que aparece, la fuente del dato y el nivel de confianza.
+      </p>
+    </div>
+
+    <p class="product-note">Fase 1 cerrada · aprobada para piloto</p>
+
+    <div class="dimensions">
+      <article class="dimension">
+        <h3>Fit</h3>
+        <p>¿Se parece al tipo de cuenta que podemos servir?</p>
       </article>
-      <article class="process-card">
-        <div class="process-step">PASO 02 · DISEÑAR</div>
-        <h3>Conos</h3>
-        <p>Propuesta y creación del agente y la estrategia, ajustados a la necesidad real del cliente.</p>
+      <article class="dimension">
+        <h3>Need</h3>
+        <p>¿Tiene la necesidad que resolvemos?</p>
       </article>
-      <article class="process-card">
-        <div class="process-step">PASO 03 · IMPLEMENTAR</div>
-        <h3>Panorama</h3>
-        <p>Acompañamiento hasta que la solución vive en tu operación y genera resultados reales, sin depender de nosotros.</p>
+      <article class="dimension">
+        <h3>Timing</h3>
+        <p>¿Existe un evento que aumente la urgencia?</p>
+      </article>
+      <article class="dimension">
+        <h3>Expected value</h3>
+        <p>¿Vale la pena comercialmente?</p>
+      </article>
+      <article class="dimension">
+        <h3>Serviceability</h3>
+        <p>¿Podemos entregar bien?</p>
+      </article>
+      <article class="dimension">
+        <h3>Engagement</h3>
+        <p>¿Está respondiendo o mostrando intención?</p>
+      </article>
+      <article class="dimension">
+        <h3>Risk</h3>
+        <p>¿Existen restricciones o daño potencial?</p>
+      </article>
+      <article class="dimension dimension-note">
+        <h3>Sin score único</h3>
+        <p>
+          Siete dimensiones separadas a propósito: un número solo esconde por qué una cuenta
+          subió o bajó, y lo que no se puede explicar no se puede defender.
+        </p>
       </article>
     </div>
   </div>
 </section>
 
-<section id="fricciones" class="friction">
+<!-- ============================================ QUÉ SOMOS · sin recurso gráfico -->
+<section class="section section-light" id="nosotros">
   <div class="wrap">
-    <div class="label section-eyebrow" style="color:var(--ics-phosphor)">LO QUE ENCONTRAMOS</div>
-    <h2 class="section-title" style="color:var(--ics-mist)">Fricciones que ya no ves</h2>
-    <p class="section-sub" style="color:var(--ics-fog)">Procesos a los que tu equipo está tan acostumbrado que dejó de notarlos. Ahí está el hallazgo.</p>
-    <div class="friction-grid">
-      <article class="friction-card">
-        <div class="friction-tag">● FRICCIÓN 01</div>
-        <h3>18 horas en Excel</h3>
-      </article>
-      <article class="friction-card">
-        <div class="friction-tag">● FRICCIÓN 02</div>
-        <h3>Datos que nadie cruza</h3>
-      </article>
-      <article class="friction-card">
-        <div class="friction-tag">● FRICCIÓN 03</div>
-        <h3>Respuestas que tardan días</h3>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="resultados" class="results">
-  <div class="wrap">
-    <div class="label section-eyebrow">EVIDENCIA</div>
-    <h2 class="section-title">Lo que nadie ve, ahora se mide</h2>
-    <p class="section-sub">Resultados reales de una de las tres fricciones encontradas en el diagnóstico Córnea.</p>
-    <div class="results-grid">
-      <div class="stat-card">
-        <div class="stat-figure">-42%</div>
-        <div class="stat-label">TIEMPO DE PROCESO</div>
+    <div class="somos-grid">
+      <div>
+        <p class="label label-violet" style="margin-bottom:14px">¿Qué es lo que somos?</p>
+        <h2 class="statement">
+          Somos exploradores de procesos, con inteligencia artificial de por medio.
+        </h2>
       </div>
-      <div class="stat-card">
-        <div class="stat-figure">18h</div>
-        <div class="stat-label">AHORRO SEMANAL</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-figure accent">3</div>
-        <div class="stat-label">FRICCIONES ENCONTRADAS</div>
+      <div>
+        <p class="prose muted">
+          A través de un diálogo constante con tu equipo buscamos tus necesidades reales — no las
+          que aparecen en un organigrama — para darles un impulso. Nuestro trabajo empieza
+          escuchando y termina cuando la solución vive en tu operación.
+        </p>
+        <p class="prose muted">
+          No vendemos inteligencia artificial. Vendemos el hallazgo, el camino y la solución. Por
+          eso acompañamos de principio a fin, sin exigirle experticia técnica a tu equipo.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="cta" class="cta">
+<!-- ============================================ PROCESOS · sin recurso gráfico -->
+<section class="section section-light" id="procesos">
   <div class="wrap">
-    <div class="label" style="color:var(--ics-violet-tint)">¿Y SI NADIE TUVIERA QUE HACERLO?</div>
-    <h2>Agenda tu diagnóstico Córnea y encuentra tu primera fricción</h2>
-    <div class="cta-actions">
-      <a class="btn btn-primary" href="mailto:hola@iriscore.solutions">Escríbenos</a>
-      <a class="btn btn-ghost" href="#proceso">Ver el proceso completo</a>
+    <div class="section-head">
+      <p class="label label-violet">Cómo lo hacemos</p>
+      <h2 class="display">Tres pasos, un mismo enfoque</h2>
+      <p class="prose muted">
+        Acompañamos de principio a fin: del análisis profundo hasta que la solución opera dentro
+        de tu empresa.
+      </p>
+    </div>
+
+    <div class="steps">
+      <article class="step">
+        <p class="label label-muted">Paso 01 · Córnea</p>
+        <h3>Encontrar necesidades</h3>
+        <p>
+          Análisis profundo de la empresa mediante entrevistas y herramientas de recopilación.
+          La IA entra desde el primer día, no al final.
+        </p>
+      </article>
+      <article class="step">
+        <p class="label label-muted">Paso 02 · Conos</p>
+        <h3>Producimos</h3>
+        <p>
+          Diseñamos y construimos el agente y la estrategia sobre la necesidad real que
+          encontramos, no sobre la que se asumía.
+        </p>
+      </article>
+      <article class="step">
+        <p class="label label-muted">Paso 03 · Panorama</p>
+        <h3>Estructuramos a tu medida</h3>
+        <p>
+          Ajustamos la solución a tu modelo de negocio y acompañamos hasta que vive en la
+          operación sin depender de nosotros.
+        </p>
+      </article>
+    </div>
+
+    <div class="pipeline-head">
+      <p class="label label-muted">Por dentro · el recorrido de un dato</p>
+    </div>
+    <ol class="pipeline">
+      <li>01<span>Intake</span></li>
+      <li>02<span>Enriquecimiento</span></li>
+      <li>03<span>Normalización</span></li>
+      <li>04<span>Validación</span></li>
+      <li>05<span>Profiling</span></li>
+      <li>06<span>Revisión humana</span></li>
+      <li>07<span>Versionado</span></li>
+      <li>08<span>Feedback</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================ VALORES · concéntricos hairline -->
+<section class="section section-light rings rings-echo" id="valores">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label label-violet">En qué creemos</p>
+      <h2 class="display">Valores</h2>
+    </div>
+
+    <div class="values">
+      <article class="value">
+        <h3>Curiosidad</h3>
+        <p>Preguntamos hasta que aparece lo que nadie estaba mirando.</p>
+      </article>
+      <article class="value">
+        <h3>Audacia</h3>
+        <p>Proponemos el camino corto, aunque todavía no lo haya recorrido nadie.</p>
+      </article>
+      <article class="value">
+        <h3>Cercanía</h3>
+        <p>Nos sentamos en tu operación, no en una sala de consultoría.</p>
+      </article>
+      <article class="value">
+        <h3>Honestidad</h3>
+        <p>No prometemos precisión antes de un piloto. Lo que decimos, se sostiene.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<footer>
+<!-- ============================================ CONTACTO · trama -->
+<section class="section section-dark on-dark dot-grid" id="contacto">
   <div class="wrap">
-    <div class="foot-brand">
-      <svg viewBox="0 0 100 100" fill="none" stroke="#F3F4F4" stroke-width="5.5" stroke-linecap="round"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="#F3F4F4" stroke="none"></rect></svg>
-      IRIS CORE SOLUTION
+    <div class="contact-grid">
+
+      <div>
+        <p class="label label-violet" style="margin-bottom:14px">Contáctanos</p>
+        <h2 class="display">Empecemos por tu primera fricción</h2>
+
+        <p class="manifesto">
+          Nosotros creamos la tecnología y la experticia. Tú la transformas en eficiencia cada día.
+        </p>
+
+        <p class="contact-direct">
+          <a href="mailto:hola@iriscore.solutions">hola@iriscore.solutions</a><br>
+          iriscore.solutions
+        </p>
+      </div>
+
+      <!--
+        TODO: cuando exista la cuenta de Formspree (o equivalente), poner el endpoint en
+        data-endpoint. Mientras esté vacío, form.js entrega el mensaje por correo en vez de
+        publicar un formulario que se traga los envíos.
+      -->
+      <form class="form" id="contact-form" data-endpoint="" method="POST">
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="empresa">Empresa</label>
+          <input id="empresa" name="empresa" type="text" autocomplete="organization" required>
+        </div>
+        <div class="field">
+          <label for="rol">Rol</label>
+          <input id="rol" name="rol" type="text" autocomplete="organization-title">
+        </div>
+        <div class="field">
+          <label for="correo">Correo</label>
+          <input id="correo" name="correo" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="descubrir">¿Qué quieres descubrir?</label>
+          <textarea id="descubrir" name="descubrir" rows="3"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Enviar</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        <p class="form-note">
+          Te respondemos al correo que dejes. Al enviar autorizas el tratamiento de tus datos
+          con el único fin de responder tu solicitud, conforme a la Ley 1581 de 2012. Puedes
+          pedir su eliminación escribiendo a
+          <a href="mailto:hola@iriscore.solutions">hola@iriscore.solutions</a>.
+        </p>
+      </form>
+
     </div>
-    <div>HOLA@IRISCORE.SOLUTIONS · IRISCORE.SOLUTIONS</div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot on-dark">
+  <div class="wrap">
+    <p class="foot-brand">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round" aria-hidden="true"><circle cx="50" cy="50" r="41"></circle><path d="M24 36 A31 31 0 0 1 43 20.5"></path><path d="M76 64 A31 31 0 0 1 57 79.5"></path><rect x="45" y="34" width="10" height="32" rx="5" fill="currentColor" stroke="none"></rect></svg>
+      Iris Core Solution
+    </p>
+    <p><a href="mailto:hola@iriscore.solutions">hola@iriscore.solutions</a> · iriscore.solutions</p>
   </div>
 </footer>
+
+<script src="src/js/nav.js" defer></script>
+<script src="src/js/scanner.js" defer></script>
+<script src="src/js/form.js" defer></script>
 
 </body>
 </html>
