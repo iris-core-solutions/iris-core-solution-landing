@@ -1,0 +1,252 @@
+/*
+  Base — reset, tipografía, controles y utilidades.
+  Reglas de marca en DESIGN.md. Nunca hardcodear color ni fuente: usar los tokens de tokens.css.
+*/
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--ics-carbon);
+  background: var(--ics-carbon);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { max-width: 100%; }
+
+a { color: var(--ics-violet); text-decoration: none; }
+a:hover { color: var(--ics-violet-hover); }
+
+/* Foco visible siempre — anillo violeta, nunca se elimina (DESIGN.md § Accesibilidad) */
+:focus-visible {
+  outline: 2px solid var(--ics-violet);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.on-dark :focus-visible { outline-color: var(--ics-violet-tint); }
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Saltar al contenido — primer tabulador de la página */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--ics-violet);
+  color: #fff;
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+  color: #fff;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Tipografía ---------- */
+
+/* ABC: solo titulares, caja alta, máx. 6 palabras, un bloque por vista */
+.display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 1.04;
+  margin: 0;
+  font-weight: 400;
+}
+
+h1.display { font-size: var(--text-display); line-height: 1; }
+h2.display { font-size: clamp(1.9rem, 3.6vw, 2.75rem); }
+h3.display { font-size: clamp(1.25rem, 2vw, 1.6rem); }
+
+/* Etiqueta mono: arriba del titular o debajo de la cifra, nunca al lado */
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.label-phosphor { color: var(--ics-phosphor); }  /* el sistema habla */
+.label-violet   { color: var(--ics-violet); }    /* titula algo accionable */
+.label-muted    { color: var(--ics-steel); }     /* neutra, sobre fondo claro */
+
+/* Sobre oscuro los dos grises de marca se caen: Acero da 3.27 y el violeta pleno 3.67, ambos
+   por debajo de 4.5. Se sube al tono claro de cada familia, que conserva el mismo significado. */
+.on-dark .label-muted  { color: var(--ics-fog); }
+.on-dark .label-violet { color: var(--ics-violet-tint); }
+
+.lead {
+  font-size: 19px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.prose {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 62ch;
+}
+
+/* Texto secundario: Acero sobre claro, Fog sobre oscuro (ratios en DESIGN.md) */
+.muted { color: var(--ics-steel); }
+.on-dark .muted { color: var(--ics-fog); }
+.on-dark { color: var(--ics-mist); }
+
+/* ---------- Botones ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  transition:
+    background-color .18s var(--ease-focus),
+    border-color .18s var(--ease-focus),
+    color .18s var(--ease-focus);
+}
+
+.btn-primary {
+  background: var(--ics-violet);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--ics-violet-hover); color: #fff; }
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--ics-hairline-strong);
+  color: var(--ics-fog);
+}
+.btn-ghost:hover { color: var(--ics-mist); border-color: var(--ics-steel); }
+
+/* ---------- Recursos gráficos (nunca los tres en una misma pieza) ---------- */
+
+/* 1 · Trama de puntos — territorio sin explorar. Solo sobre carbón. */
+.dot-grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--dot-grid-color) 1.4px, transparent 1.4px);
+  background-size: var(--dot-grid-size) var(--dot-grid-size);
+  pointer-events: none;
+}
+
+/* 2 · Círculos concéntricos — el hallazgo propagándose. Máx. 3 anillos, cortados por el borde. */
+.rings::before,
+.rings::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 1.4px solid currentColor;
+  opacity: .16;
+  pointer-events: none;
+}
+.rings::before {
+  width: 760px; height: 760px;
+  right: -280px; top: -300px;
+}
+.rings::after {
+  width: 520px; height: 520px;
+  right: -160px; top: -180px;
+}
+
+/* Eco: en Valores los anillos vuelven más pequeños y más tenues, desde la esquina opuesta.
+   Repetir el mismo arco dos veces no es un hallazgo propagándose, es un calco. */
+.rings-echo::before {
+  width: 430px; height: 430px;
+  left: -190px; right: auto; top: auto; bottom: -210px;
+  opacity: .10;
+}
+.rings-echo::after {
+  width: 260px; height: 260px;
+  left: -105px; right: auto; top: auto; bottom: -125px;
+  opacity: .10;
+}
+
+/* En pantalla angosta el arco cruza el texto de lado a lado y deja de ser un hallazgo
+   propagándose para ser una raya suelta. La capa decorativa no se gana su lugar aquí. */
+@media (max-width: 980px) {
+  .rings::before, .rings::after { display: none; }
+}
+
+/* 3 · Halo de foco — violeta al núcleo, fósforo en el borde. Uno solo en todo el sitio: el hero.
+   Sangra por una esquina: el Carbón tiene que seguir leyéndose como Carbón, no como morado. */
+.halo::after {
+  content: '';
+  position: absolute;
+  right: -300px;
+  top: -320px;
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(109, 77, 246, .34) 0%,
+    rgba(109, 77, 246, .13) 36%,
+    rgba(63, 242, 160, .05) 58%,
+    transparent 74%
+  );
+  pointer-events: none;
+}
+
+/* A 375px un halo de 620px cubre casi todo el hero: deja de ser una capa de luz y se
+   convierte en el degradado violeta→fósforo que el manual prohíbe. */
+@media (max-width: 700px) {
+  .halo::after {
+    width: 340px;
+    height: 340px;
+    right: -190px;
+    top: -190px;
+  }
+}
+
+/* ---------- Secciones ---------- */
+
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-section) 0;
+}
+.section > .wrap { position: relative; }
+
+.section-dark { background: var(--ics-carbon); color: var(--ics-mist); }
+.section-light { background: var(--ics-mist); color: var(--ics-carbon); }
+
+.section-head { margin-bottom: var(--space-block); }
+.section-head .label { margin-bottom: 14px; }
+.section-head .display { margin-bottom: 18px; }
+.section-head .prose { max-width: 60ch; }
+
+@media (max-width: 860px) {
+  :root { --space-section: 64px; --space-block: 36px; }
+  .lead { font-size: 17px; }
+}

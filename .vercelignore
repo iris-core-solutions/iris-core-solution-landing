@@ -1,0 +1,16 @@
+# Qué NO se sube al sitio publicado.
+# El repo puede tener documentación; el sitio no tiene por qué servirla.
+# OJO: brand/assets/fonts/ se queda — tokens.css carga la fuente ABC desde ahí.
+
+# Documentación interna
+*.md
+
+# Manual de marca completo y su runtime: material de trabajo, no parte del sitio
+brand/ICS-Brandbook-v1.html
+brand/assets/doc-page.js
+brand/assets/support.js
+
+# Ruido
+.DS_Store
+node_modules/
+*.log

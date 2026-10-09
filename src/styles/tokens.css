@@ -11,12 +11,19 @@
   --ics-mist: #F3F4F4;        /* fondo modo claro / texto sobre oscuro */
   --ics-fog: #8D95A0;         /* texto terciario / mono secundario */
   --ics-border: #D7DBE0;      /* bordes sobre fondo claro */
-  --ics-border-soft: #E4E7EA;
   --ics-violet: #6D4DF6;      /* acento accionable — CTA, links, foco. Máx. ~8%, 1 CTA por vista */
   --ics-violet-hover: #5436D4;
-  --ics-violet-tint: #D9CFFD;
+  --ics-violet-tint: #D9CFFD; /* violeta legible sobre oscuro — el pleno solo da 3.67 ahí */
   --ics-phosphor: #3FF2A0;    /* acento informativo — datos en vivo, estados. Máx. ~5%. NUNCA clicable */
-  --ics-danger: #C0392B;
+
+  /* Hairlines — antes hardcodeadas en main.css */
+  --ics-hairline: #1F242B;        /* bordes sobre carbón */
+  --ics-hairline-strong: #2A2E35; /* bordes de botón fantasma sobre carbón */
+
+  /* Ritmo vertical (escala de 8) */
+  --space-section: 88px;
+  --space-block: 48px;
+  --space-card: 26px;
 
   /* Tipografía */
   --font-display: 'ABC', 'Space Grotesk', sans-serif;   /* solo titulares, caja alta, máx. 6 palabras */
@@ -25,10 +32,8 @@
 
   /* Escala tipográfica (ver brand/BRANDBOOK.md → Tipografía) */
   --text-display: clamp(2.5rem, 5vw, 4.75rem); /* 36–120px, ABC, line-height .98–1.02 */
-  --text-subtitle: clamp(1.25rem, 2vw, 1.875rem); /* 20–30px, Space Grotesk 500 */
   --text-body: 1rem;       /* 15–17px, Space Grotesk 400, line-height 1.6 */
   --text-label: 0.75rem;   /* 10–13px, mono, tracking +14% */
-  --text-figure: clamp(1.5rem, 3vw, 2.5rem); /* 24–40px, mono 500 */
 
   /* Motion — "enfoque de lente": entra rápido, se asienta seco, sin rebote */
   --ease-focus: cubic-bezier(.2, .8, .2, 1);
